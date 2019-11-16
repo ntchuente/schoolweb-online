@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en"  ng-app="keren.core">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/koris.ico">
+    <link rel="stylesheet" href="modules\login\css\font-awesome.min.css">
+    <link href="modules\login\css\login_1.css" rel="stylesheet" />
+    <link href="modules\login\css\styleResponsive_1.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css\simplebar.css">
+    <link href="css\style_principalFragmentSerge.css" rel="stylesheet" />
+    <link href="css\styleResponsive_principalFragmentSerge.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" type="text/css" href="css\principal.css">
+    <link rel="stylesheet" type="text/css" href="css\kaban.css">
+    
+    <title>Cauris ERP</title>
+    
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib\others\sweetalert.min.js"></script>    
+    <script src="lib/others/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="lib/others/jquery.min.js"><\/script>')</script>  
+    <!-- <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script> -->   
+    <script src="js\bootstrap.min.js"></script>
+     <link href="css\angularjs-datetime-picker.css" rel="stylesheet">
+    <!--<script src="lib\others\pdf.js"></script>-->
+    <!-- Angular JS  -->
+    <script src="lib\angular\angular.js"></script> 
+    <script src="lib\angular\angular-sanitize.min.js"></script>  
+    <script src="lib\angular\angular-translate.min.js"></script>  
+    <script src="lib\angular\angular-resource.js"></script>	
+    <script src="lib\angular\angular-route.min.js"></script>	
+    <script src="lib\angular\angular-cookies.min.js"></script>    
+    <link href="css\fullcalendar.min.css" type="text/css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css\viewer.css" rel="stylesheet">-->
+    <link href="css\textAngular.css" rel="stylesheet" />
+    <link href="css\font-awesome.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="lib/others/moment.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css\bootstrap-select.min.css" rel="stylesheet">  
+    <script src="lib\angular\angularjs-datetime-picker.min.js"></script>
+    <script src="lib\others\bootstrap-select.min.js"></script>  
+    <script src="lib\others\bootstrap-notify.min.js"></script>
+    <script src="lib\others\jquery.canvasjs.min.js"></script>
+    <script src="lib\angular\textAngular-rangy.min.js"></script>
+    <script src="lib\angular\textAngular-sanitize.min.js"></script>
+    <script src="lib\angular\textAngular.min.js"></script>   
+    <script src="lib\angular\angular-file-upload.min.js"></script>   
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css\ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css\dashboard.css" rel="stylesheet">
+    <script src="js\ie-emulation-modes-warning.js"></script>
+    <script src="js\popper.min.js"></script>    
+    <script type="text/javascript" src="lib/others/calendar.js"></script>
+    <script type="text/javascript" src="lib/others/fullcalendar.min.js"></script>  
+    <script type="text/javascript" src="lib/others/gcal.min.js"></script>    
+    <script src="lib\others\ace.js"></script>
+    <script src="lib\others\ext-language_tools.js"></script> 
+    <script src="js\principal.js"></script>  
+    <script src="js\services.js"></script>
+    <script src="modules\calendrier\js\controllers.js"></script>
+    <script src="modules\discussions\js\controllers.js"></script>
+    <script src="modules\commons\js\commons.js"></script>    
+    <script src="modules\login\js\controllers.js"></script>
+<!--    <script src="modules\commons\js\commons.js"></script>-->
+    <script src="modules\login\js\services.js"></script>
+    <script src="js\kerencontroller.js"></script>
+<!--    <script src="js\dialogLoading.js"></script> -->
+    <script src="js\fileChooserImage.js"></script>
+    <script src="lib\others\jspdf.debug.js"></script> 
+    <script src="lib\others\html2pdf.js"></script> 
+    <script src="lib\others\fonctionsUtilitaires.js"></script> 
+    <script src="lib\others\jquery.scrollTo.js"></script> 
+    <script src="lib\others\tchat.js"></script> 
+    
+    <script src="js\simplebar.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>    
+        
+        body{
+            background-color: #e6e6e6;
+            padding-top: 0px;
+        }
+        
+      li.activemodule a:active{
+        color: red;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .activemenu {
+        text-decoration: none;
+        background:#b5c5ba;
+        -moz-border-radius-topleft:3px;
+        -webkit-border-top-left-radius:3px;
+        -moz-border-radius-topright:3px;
+        -webkit-border-top-right-radius:3px;
+    }    
+    .activemenu-color {
+        color: white; 
+        background-color: transparent;
+        text-decoration: none;
+    }   
+    </style>
+
+  </head>
+
+  <body ng-controller="kerenCtrl">
+      <div ng-switch on="level">
+          <div ng-switch-when="authenticate" >
+              <div ng-controller="mainCtrl">
+                <ng-include src="'views/principalFragment.html'"  ng-show = "level=='authenticate'"></ng-include>
+             </div>
+          </div>
+          <div ng-switch-default>
+              <div ng-controller="loginCtrl">
+                <ng-include src="'modules/login/views/login.html'"  ng-show = "level!='authenticate'"></ng-include>
+             </div>
+          </div>
+      </div>
+       
+    <!-- Fenetre Modale Global -->
+    <div id="globalModal" class="modal fade globalModalStyle" data-backdrop="false" role="dialog">
+       <div class="modal-dialog   modal-lg">
+         <div class="modal-content" >
+            <div class="modal-header dialogHeaderStyle" >
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gmodaltitle"></h4>
+            </div>
+             <div class="modal-body" id="gmodalbody">
+                        
+            </div>
+            <div class="modal-footer"  id="gmodalfooter">
+               <button id="boutonSAveDialog01" class="btn btn-primary btn-sm"  ng-click="addDialogAction()">{{'Enregistrer' | translate}}</button>
+               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" ng-click="cancelDialogAction()">{{'Annuler' | translate}}</button>          
+            </div>
+         </div>
+       </div>
+    </div>
+    
+    <!-- Fenetre Modale Othe -->
+    <div id="myModal" class="modal"  data-backdrop="false" role="dialog">
+       <div class="modal-dialog   modal-lg">
+         <div class="modal-content" >
+            <div class="modal-header dialogHeaderStyle" >
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modaltitle"></h4>
+            </div>
+             <div class="modal-body" id="modalbody">
+                        
+            </div>
+            <div class="modal-footer"  id="modalfooter">
+               <button id="boutonSAveDialog02" class="btn btn-primary btn-sm"  ng-click="addDialogAction()">{{'Enregistrer' | translate}}</button>
+               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" ng-click="cancelDialogAction()">{{'Annuler' | translate}}</button>           
+            </div>
+         </div>
+       </div>
+    </div>
+     <!-- Fenetre Modale Othe 2 -->
+    <div id="myModal1" class="modal"  data-backdrop="false" role="dialog">
+       <div class="modal-dialog   modal-lg">
+         <div class="modal-content" >
+            <div class="modal-header dialogHeaderStyle" >
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modaltitle1"></h4>
+            </div>
+             <div class="modal-body" id="modalbody1">
+                        
+            </div>
+            <div class="modal-footer"  id="modalfooter1">
+               <button id="boutonSAveDialog03" class="btn btn-primary btn-sm"  ng-click="addDialogAction()">{{'Enregistrer' | translate}}</button>
+               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" ng-click="cancelDialogAction()">{{'Annuler' | translate}}</button>           
+            </div>
+         </div>
+       </div>
+    </div>
+      <!-- Fenetre Modale Othe 3 -->
+    <div id="myModal2" class="modal"  data-backdrop="false" role="dialog">
+       <div class="modal-dialog   modal-lg">
+         <div class="modal-content" >
+            <div class="modal-header dialogHeaderStyle" >
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modaltitle2"></h4>
+            </div>
+             <div class="modal-body" id="modalbody2">
+                        
+            </div>
+            <div class="modal-footer"  id="modalfooter2">
+               <button id="boutonSAveDialog04" class="btn btn-primary btn-sm"  ng-click="addDialogAction()">{{'Enregistrer' | translate}}</button>
+               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" ng-click="cancelDialogAction()">{{'Annuler' | translate}}</button>           
+            </div>
+         </div>
+       </div>
+    </div>
+        <!-- Fenetre Modale Othe 3 -->
+    <div id="viewerid" class="modal"  data-backdrop="false" role="dialog">
+       <div class="modal-dialog   modal-lg">
+         <div class="modal-content" >
+            <div class="modal-header" >
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="viewertitle"></h4>
+            </div>
+             <div class="modal-body" id="viewerbody">
+                        
+            </div>            
+         </div>
+       </div>
+    </div>
+    <div   id="report_template">
+           
+    </div> 
+    <div   id="editor">
+            
+    </div> 
+      
+     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+       
+       /************ SERGE ***************/
+       var idElementMenuActif = "";
+       var idElementMenuSousMenusActif = "";
+       var idElementMenuSousMenusPetitsActif = "";
+       var siZoneMenugaucheDejaAfficher = false;
+       var largeurEcran = 1000;
+       var hauteurEcran = 0;
+       var defaultResolutionSmallScreen = 1280;
+       var defaultBackgroundColorEnteteBar = "#757575";
+       var nomModuleCourantResponsive = "";
+       var iDModuleCourantResponsive = "";
+       var couleurModuleCourantResponsive = "";
+       var siModuleDejaClique = false;
+       var idParentBarreHorizontale = "";
+       var entetePrincipalPanelPart01ElementsModule = "";
+       var elementModuleCourantId = "";
+       var idMenuDeroulantActif = "";
+       /************************************/
+       
+       
+       
+       $('.modal').on('hidden.bs.modal', function( event ) {
+                $(this).removeClass( 'fv-modal-stack' );
+                $('body').data( 'fv_open_modals', $('body').data( 'fv_open_modals' ) - 1 );
+                });
+
+
+        $( '.modal' ).on( 'shown.bs.modal', function ( event ) {
+
+                           // keep track of the number of open modals
+
+                           if ( typeof( $('body').data( 'fv_open_modals' ) ) == 'undefined' )
+                           {
+                             $('body').data( 'fv_open_modals', 0 );
+                           }
+
+
+                           // if the z-index of this modal has been set, ignore.
+
+                        if ( $(this).hasClass( 'fv-modal-stack' ) )
+                                {
+                                return;
+                                }
+
+                        $(this).addClass( 'fv-modal-stack' );
+
+                        $('body').data( 'fv_open_modals', $('body').data( 'fv_open_modals' ) + 1 );
+
+                        $(this).css('z-index', 3040 + (10 * $('body').data( 'fv_open_modals' )));
+
+                        $( '.modal-backdrop' ).not( '.fv-modal-stack' )
+                                .css( 'z-index', 3039 + (10 * $('body').data( 'fv_open_modals' )));
+
+
+                        $( '.modal-backdrop' ).not( 'fv-modal-stack' )
+                                .addClass( 'fv-modal-stack' ); 
+
+                         });
+
+
+                
+      $(function () {
+         $('[data-toggle="tooltip"]').tooltip();
+      });
+     
+   </script>
+  </body>
+</html>

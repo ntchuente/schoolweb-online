@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.keren.net/keren"
+           xmlns:tns="http://www.keren.net/keren"
+           elementFormDefault="qualified">
+    
+    <xs:element name="keren">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:action"  minOccurs="1" maxOccurs="1" />
+                <xs:element ref="tns:menu"    minOccurs="0" maxOccurs="unbounded"  />
+                <xs:element ref="tns:menuitem"    minOccurs="0" maxOccurs="unbounded"  />
+                <xs:element ref="tns:formRecord"  minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="tns:treeRecord"  minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="tns:reportRecord"  minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="tns:dashboardRecord"  minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="tns:calendarRecord"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="action">
+        <xs:complexType>
+            <xs:attribute name="id"  type="xs:string"  use="required" />
+            <xs:attribute name="hasmenu"  type="xs:boolean" default="true" />
+            <xs:attribute name="parent_ref" type="xs:string"/>
+            <xs:attribute name="type" type="xs:string"/>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="label" type="xs:string"/>
+            <xs:attribute name="value" type="xs:string"/>
+        </xs:complexType>       
+    </xs:element>
+     
+    <xs:element name="menu">
+        <xs:complexType>
+            <xs:attribute name="id"  type="xs:string"  use="required" />
+            <xs:attribute name="label"  type="xs:string"  use="required" />
+            <xs:attribute name="parent_ref" type="xs:string"  use="required" />
+            <xs:attribute name="gyphycon" type="xs:string" />
+            <xs:attribute name="hasmenu"  type="xs:boolean" default="true" />
+        </xs:complexType>
+    </xs:element>
+     
+    <xs:element name="menuitem">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:action"   minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" use="required" />
+            <xs:attribute name="label"  type="xs:string"  use="required" />
+            <xs:attribute name="modal"  type="xs:boolean" default="false" />
+            <xs:attribute name="link"  type="xs:string" default="" />
+            <xs:attribute name="report"  type="xs:string" default="" />
+            <xs:attribute name="entity_ref"  type="xs:string"  use="required" />
+            <xs:attribute name="model_ref"  type="xs:string"  use="required" />
+            <xs:attribute name="method_ref"  type="xs:string"/>
+            <xs:attribute name="gyphycon" type="xs:string" />
+            <xs:attribute name="parent_ref" type="xs:string" default="" />  
+            <xs:attribute name="view_type" type="xs:string" default="tree,form" />  
+            <xs:attribute name="hide" type="xs:boolean" default="false" />     
+        </xs:complexType>
+    </xs:element>     
+   
+     
+    <xs:element name="dashboardRecord">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:dashboard"   minOccurs="0" maxOccurs="unbounded"/>        
+            </xs:sequence>
+	    <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent_ref" type="xs:string" />   
+            <xs:attribute name="action_ref" type="xs:string" /> 
+            <xs:attribute name="entity_ref"  type="xs:string"  use="required" />
+            <xs:attribute name="model_ref"  type="xs:string"  use="required" /> 
+            <xs:attribute name="method_ref"  type="xs:string"  use="required" />         
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="dashboardentry">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="tns:template"   minOccurs="0" maxOccurs="1"/>           
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="type"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent_ref" type="xs:string" />   
+            <xs:attribute name="entity_ref"  type="xs:string"/>
+            <xs:attribute name="model_ref"  type="xs:string"/> 
+            <xs:attribute name="method_ref"  type="xs:string"/>      
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="dashboard">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:dashboardentry"   minOccurs="0" maxOccurs="unbounded"/>          
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent_ref" type="xs:string" />   
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="formRecord">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:header"   minOccurs="0" maxOccurs="1"/>                 
+                <xs:element ref="tns:sheet"   minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="tns:template"   minOccurs="0" maxOccurs="1"/>          
+            </xs:sequence>
+	    <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />   
+            <xs:attribute name="action_ref" type="xs:string" />           
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="treeRecord">
+        <xs:complexType>            
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>                
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />
+            <xs:attribute name="action_ref" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="calendarRecord">
+        <xs:complexType>            
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />
+            <xs:attribute name="action_ref" type="xs:string" />
+            <xs:attribute name="titlefield"  type="xs:string" />
+            <xs:attribute name="startfield"  type="xs:string" />
+            <xs:attribute name="endfield"  type="xs:string" />
+            <xs:attribute name="allday"  type="xs:boolean" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="reportRecord">
+        <xs:complexType>            
+            <xs:sequence>
+                <xs:element ref="tns:search" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="tns:template"   minOccurs="1" maxOccurs="1"/>                
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />
+            <xs:attribute name="action_ref" type="xs:string" />
+            <xs:attribute name="extern" type="xs:boolean" default="false" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="template"  type="xs:string">
+        
+    </xs:element> 
+          
+    <xs:element name="search">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="class" type="xs:string" />
+            <xs:attribute name="entity" type="xs:string" />
+            <xs:attribute name="module" type="xs:string" />
+            <xs:attribute name="method" type="xs:string" /> 
+            <xs:attribute name="ignore" type="xs:boolean" default="false" />            
+        </xs:complexType>        
+    </xs:element>
+    
+    <xs:element name="header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:button"   minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="tns:field"   minOccurs="0" maxOccurs="1"/>        
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="sheet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="0" maxOccurs="unbounded"/>  
+                <xs:element ref="tns:group"   minOccurs="0" maxOccurs="unbounded"/>  
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="field">
+        <xs:complexType>
+            <xs:attribute name="name"  type="xs:string" />            
+            <xs:attribute name="target"  type="xs:string" />
+            <xs:attribute name="entity_ref"  type="xs:string"/>
+            <xs:attribute name="model_ref"  type="xs:string"/> 
+            <xs:attribute name="method_ref"  type="xs:string"/>  
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="group">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+        </xs:complexType>    
+    </xs:element>
+    <xs:element name="button">
+        <xs:complexType>
+            <xs:attribute name="type" type="xs:string"/>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="label" type="xs:string"/>
+            <xs:attribute name="value" type="xs:string"/>
+            <xs:attribute name="class" type="xs:string"/>
+            <xs:attribute name="states" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,1131 @@
+@media all and (min-width: 300px) and (max-width:350px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px yellow;*/
+		width:100%;
+		margin-bottom:30px;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:40px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	#titrePart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#titrePart02{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#emailInputEtLogoContent{
+		width:100%;
+	}
+	
+	#passwordInputEtLogoContent{
+		width:100%;
+	}
+	
+	#connexionbouttonContent{
+		width:100%;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px yellow;*/
+		width:25%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:70%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:50px;
+	}
+	
+	.moduleItem{
+		margin-right:8px;
+		margin-bottom:8px;
+	}
+}
+
+@media all and (min-width: 350px) and (max-width:400px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px yellow;*/
+		width:100%;
+		margin-bottom:30px;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:40px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	#titrePart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#titrePart02{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#emailInputEtLogoContent{
+		width:100%;
+	}
+	
+	#passwordInputEtLogoContent{
+		width:100%;
+	}
+	
+	#connexionbouttonContent{
+		width:100%;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:25%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:70%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:72px;
+	}
+	
+	.moduleItem{
+		margin-right:30px;
+		margin-bottom:40px;
+	}
+}
+
+@media all and (min-width: 400px) and (max-width:500px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:30px;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	#titrePart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#titrePart02{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#emailInputEtLogoContent{
+		width:100%;
+	}
+	
+	#passwordInputEtLogoContent{
+		width:100%;
+	}
+	
+	#connexionbouttonContent{
+		width:100%;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:46.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:80px;
+	}
+}
+
+@media all and (min-width: 500px) and (max-width:767px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+		margin-bottom:80px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	#titrePart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#titrePart02{
+		/*border:solid 1px red;*/
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#emailInputEtLogoContent{
+		width:100%;
+	}
+	
+	#passwordInputEtLogoContent{
+		width:100%;
+	}
+	
+	#connexionbouttonContent{
+		width:100%;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:46.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:80px;
+	}
+}
+
+@media all and (min-width: 768px) and (max-width: 800px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:80px;
+	}
+}
+
+@media all and (min-width: 800px) and (max-width: 900px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		padding-left:80px;
+	}
+
+}
+
+@media all and (min-width: 900px) and (max-width: 1024px){
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:100px;
+		padding-right:100px;
+	}
+}
+
+@media all and (min-width: 1024px) and (max-width: 1100px) {
+	
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:190px;
+		padding-right:190px;
+	}
+}
+
+@media all and (min-width: 1100px) and (max-width: 1152px) { 
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:190px;
+		padding-right:190px;
+	}
+}
+
+@media all and (min-width: 1152px) and (max-width: 1280px) {
+	body{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#loginPageContent{
+		overflow:auto;
+		text-align:center;
+	}
+	
+	#loginPanelPart01{
+		/*border:solid 1px red;*/
+		width:100%;
+		padding-left:0px;
+	}
+	
+	#loginPanelPart02{
+		display:none;
+	}
+	
+	#loginPanelPart03{
+		/*border:solid 1px red;*/
+		width:100%;
+		margin-bottom:20px;
+	}
+	
+	#loginPanelPart01Division02{
+		margin-left:0px;
+	}
+	
+	#footerContent{
+		display:none;
+	}
+	
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:230px;
+		padding-right:230px;
+	}
+}
+
+@media all and (min-width: 1280px) and (max-width: 1359px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:300px;
+		padding-right:300px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		/*border:solid 1px red;*/
+		padding-left:45px;
+	}
+}
+
+@media all and (min-width: 1360px) and (max-width: 1366px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:300px;
+		padding-right:300px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		/*border:solid 1px red;*/
+		padding-left:45px;
+	}
+}
+
+@media all and (min-width: 1366px) and (max-width: 1400px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:300px;
+		padding-right:300px;
+	}
+	
+	#bodyPrincipalPanelPart02Special{
+		/*border:solid 1px red;*/
+		padding-left:45px;
+	}
+}
+
+@media all and (min-width: 1400px) and (max-width: 1440px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:350px;
+		padding-right:350px;
+	}
+}
+
+@media all and (min-width: 1440px) and (max-width: 1500px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:350px;
+		padding-right:350px;
+	}
+}
+
+@media all and (min-width: 1500px) and (max-width: 1599px) {
+	/***************** PANEL PRINCIPAL *********************/
+	#principalePanel{
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+	
+	#entetePrincipalPanelPart01{
+		/*border:solid 1px yellow;*/
+		width:49.7%;
+		text-align:left;
+		display:inline-block;
+		color:white;
+		font-family:HighVoltage;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	#entetePrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		width:49.7%;
+		text-align:right;
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#bodyPrincipalPanelPart01{
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	
+	#bodyPrincipalPanelPart02{
+		/*border:solid 1px red;*/
+		padding-left:400px;
+		padding-right:400px;
+	}
+}
+
+@media all and (min-width: 1600px) and (max-width: 1679px) {
+	
+}
+
+@media all and (min-width: 1680px) and (max-width: 1919px) {
+}
+	
+@media all and (min-width: 1920px) {
+	
+}
+
+	

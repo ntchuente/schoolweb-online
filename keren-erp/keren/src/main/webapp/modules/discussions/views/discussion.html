@@ -1,0 +1,208 @@
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link href="modules\discussions\css\discussion.css"  rel="stylesheet">
+<div  style="position:absolute;width:100%;height:90%;overflow-y:hidden;" ng-controller="discussionCtrl">
+            <span class="sm-side" style="height:100%;display:inline-block;width:25%;vertical-align:top;margin-right:0px;background-color:#e5e8ef;">
+                <div class="user-head" style="background-color:#f0eeee;padding:15px;padding-bottom:25px;height:90px;">
+                    <a class="inbox-avatar" href="javascript:;">
+                        <img  width="54" hieght="50" id="mail_user_id" >
+                    </a>
+                    <div class="user-name">
+                        <h5><a href="#">{{currentUser.intitule | translate}}</a></h5>
+                        <span><a href="#">{{currentUser.courriel}}</a></span>
+                    </div>
+                    <a class="mail-dropdown pull-right" href="javascript:;">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                </div>                
+                <div style="height:85%;overflow-y: auto; "> 
+                    <ul class="inbox-nav inbox-divider">               
+                            <li>
+                                <a href="#"  ng-click="loadInboxMessages()">
+                                    <i class="fa fa-inbox"></i>
+                                       {{'INBOX' | translate}} 
+                                       <span class="label label-danger pull-right" ng-hide="messagestate.unreadMessages==0">
+                                           {{messagestate.unreadMessages}}
+                                       </span>
+                                </a>
+                       </li>                                        
+                    </ul>
+                    <ul class="inbox-nav inbox-divider">
+                        <li >
+                            <a href="#"><i class="fa fa-inbox"></i>{{'CANAUX' | translate}} <span class="glyphicon glyphicon-plus pull-right" style="margin-top: 15px;"></span></a>
+                        </li>
+                        <ul ng-repeat="item in canaux">
+                            <li style="height: 10px;margin-top: -10px;">
+                                <a href="#" ng-click="gotoselectcanal(item)">#{{item.code}}</a>
+                            </li>
+                            
+                        </ul>
+                    </ul>
+                    <ul class="nav nav-pills nav-stacked labels-info ">
+                        <li > <h4>{{'MSGEDIRECT' | translate}}</h4> </li>
+                        <ul ng-repeat="item in connectedusers"> 
+                            <li> <a href="#"  ng-click="gotodirectdiscussion(item)"> <i class=" fa fa-circle text-success"></i>{{item.intitule | translate}}</a>  </li>                           
+                        </ul>
+                    </ul>
+                    
+            </div>
+            </span>
+         <span class="lg-side" style="height:100%;display:inline-block;width:74.7%;padding-left:0px;">
+            <div id="headerContent" style="width:100%;height:160px;">
+                    <div class="inbox-head" style="height:90px">
+                        <h3>{{windowTitle}}</h3>
+                        <form action="#" class="pull-right position">
+                            <div class="input-append">
+                                <input type="text" class="sr-input" placeholder="Search Mail">
+                                <button class="btn sr-btn" type="button"><span class='glyphicon glyphicon-search'></span></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="inbox-body">
+                       <div class="mail-option">
+                           <div class="chk-all">
+                               <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                               <div class="btn-group">
+                                   <a data-toggle="dropdown" href="#" class="btn mini all" aria-expanded="false">
+                                       All
+                                       <i class="fa fa-angle-down "></i>
+                                   </a>
+                                   <ul class="dropdown-menu">
+                                       <li><a href="#"> None</a></li>
+                                       <li><a href="#"> Read</a></li>
+                                       <li><a href="#"> Unread</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+
+                           <div class="btn-group">
+                               <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+                                   <i class=" fa fa-refresh"></i>
+                               </a>
+                           </div>
+                           <div class="btn-group hidden-phone">
+                               <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
+                                   More
+                                   <i class="fa fa-angle-down "></i>
+                               </a>
+                               <ul class="dropdown-menu">
+                                   <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                   <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                               </ul>
+                           </div>
+                           <div class="btn-group">
+                               <a data-toggle="dropdown" href="#" class="btn mini blue">
+                                   Move to
+                                   <i class="fa fa-angle-down "></i>
+                               </a>
+                               <ul class="dropdown-menu">
+                                   <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                   <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                               </ul>
+                           </div>
+
+                           <ul class="unstyled inbox-pagination">
+                               <li><span>{{pagination.currentPage}} - {{pagination.endIndex}} / {{pagination.totalPages}} </span></li>
+                               <li>
+                                   <button type="button" class="btn btn-default btn-sm"  ng-click="pagination.previous()"  ng-disabled="!pagination.hasprevious()">
+                                       <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                                   </button>
+                               </li>
+                               <li>
+                                   <button type="button" class="btn btn-default btn-sm"  ng-click="pagination.next()"  ng-disabled="!pagination.hasnext()">
+                                       <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                                   </button>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>             
+               <div id="bodyContent" style="width:100%;height:75%; padding:8px">
+<!--                   <div style="height: 45px;display: inline-block;padding-left: 0px;border: solid 5px blue;" class="col-sm-12  col-md-12" ng-hide="windowType=='INBOX'"> 
+                            <div class="form-group  col-sm-11  col-md-11" style="padding-left: 0px; padding-right: 0px;">
+                                     <input type="text" class="form-control"  id="name" placeholder="Saisir votre Message" ng-required="true" ng-minlength="2" style="width: 100%;" ng-model="messagebody">
+                            </div> 
+                            <div class="col-sm-1  col-md-1" style="padding:0px;height: 100%;"> 
+                                 <span style="display: inline-block;width: 45%;height: 100%;"> 
+                                    <div class="btn-group  dropdown"    role="group"  aria-label="group 2" style="width: 100%;height: 100%;"> 
+                                        <button type="button"  class="btn btn-default dropdown dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="false"  aria-expanded="true" id="pjidbtn" style="width: 100%;height: 100%;margin:0px;padding: 0px;"> 
+                                                <span style="display: inline-block"> 
+                                                        <span class="glyphicon glyphicon-paperclip"  aria-hidden="true" style="color:blue;"> </span> 
+                                                        <span class="caret"></span> 
+                                                </span> 
+                                        </button> 
+                                        <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn"   id="pjmenuid"> 
+                                           <li role="presentation"> <a role="menuitem" tabindex="-1" href="#" ng-click="imageClick('pjfileinput_id')"> Ajouter </a> </li> 
+                                        </ul>
+                                        <input type="file" id="pjfileinput_id" style="display: none" fileinput="file"   onchange="angular.element(this).scope().gererChangementFichier(event)">
+                                    </div> 
+                                 </span> 
+                                <span style="display: inline-block;width: 50%;height: 100%;margin: 0px;"> 
+                                     <button type="button"  class="btn btn-default btn-sm" ng-click ="sendAction()" style="width: 100%;height: 100%;margin:0px;margin:0px;padding: 0px;"> 
+                                           <span class="glyphicon glyphicon-send" aria-hidden="true" style="color:blue"></span> 
+                                     </button> 
+                                </span> 
+                             </div> 
+                      </div> -->
+                    <div class="panel-heading"  ng-hide="windowType=='INBOX'">
+                        <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="{{'INPUTMSGE' | translate}}"  ng-required="true" ng-minlength="2"  ng-model="messagebody"/>
+                                 <div class="input-group-btn ">
+                                         <button class="btn btn-info" type="button" ng-click="imageClick('pjfileinput_id')"  id="pjidbtn">
+                                            <span class="glyphicon glyphicon-paperclip"  aria-hidden="true" style="color:blue;"> </span> 
+                                                <span class="caret"></span> 					  
+                                         </button>
+<!--                                          <ul class="dropdown-menu"  role="menu"  aria-labelledby="pjidbtn"   id="pjmenuid" > 
+                                                 <li role="presentation"> <a role="menuitem" tabindex="-1" href="#" ng-click="imageClick('pjfileinput_id')"> Ajouter </a> </li>
+                                           </ul>	-->
+                                        <input type="file" id="pjfileinput_id" style="display: none" fileinput="file"   onchange="angular.element(this).scope().gererChangementFichier(event)">
+                                 </div>
+                                 <span class="input-group-btn">
+                                         <button class="btn btn-info" type="button" ng-click ="sendAction()">
+                                              <span class="glyphicon glyphicon-send"  aria-hidden="true" style="color:blue"></span> 
+                                         </button>
+                                 </span>
+                        </div>
+                        <div  id="pjmenuid">
+                            
+                        </div>
+                    </div>
+                   <div style="height: 87%;width: 100%;overflow: auto;" id="tablecontainer"> 
+                       <ul class="media-list" ng-repeat="item in messages">
+                           <li class="media">
+                               <div class="media-body">
+                                   <div class="media">
+                                       <a class="pull-left" href="#"  ng-if="item.typeMessage=='RECEPTION'">
+                                           <img class="media-object img-circle " id="{{item.imageid}}"  width="48" height="46" />
+                                        </a>
+                                       <a class="pull-right" href="#"  ng-if="item.typeMessage=='ENVOI'">
+                                            <img class="media-object img-circle " id="{{item.imageid}}" width="52" height="50" />
+                                        </a>
+                                       <div class="media-body">
+                                           {{item.body}}
+                                           <br/>
+                                           <span style="display:inline-block" ng-repeat="pj in item.piecesjointe" ng-show="item.piecesjointe.length>0">
+                                               <a style="padding-right:5px;" href="#" ng-click="showpiecejointe(pj.id)">
+                                                   {{pj.attachename}}
+                                               </a>
+                                           </span>
+                                           <br />
+                                           <small class="text-muted" ng-hide="item.typeMessage=='ENVOI'">{{item.sender.intitule}} | {{formatDat(item.date)}}</small>
+                                           <small class="text-muted pull-right" ng-hide="item.typeMessage=='RECEPTION'">{{item.sender.intitule}} | {{formatDat(item.date)}}</small>
+                                           <span display:inline-block ng-show="shownolu(item)">
+                                               <a style="padding-right:5px;" href="#" ng-click="marquerlu(item.id)">
+                                                   <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                               </a>
+                                           </span>
+                                           <hr />
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                       </ul> 
+                   </div>
+ </div>
+       

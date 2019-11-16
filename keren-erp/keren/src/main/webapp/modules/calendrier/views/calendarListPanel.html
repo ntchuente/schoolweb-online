@@ -1,0 +1,26 @@
+<div class="col-sm-12  col-md-12">    
+    <table class="table table-striped table-hover table-responsive table-sm  table-header"  style="margin-top: -19px;" id="table">
+        <thead>
+            <tr id="rowheader">
+              <th><input type="checkbox" ng-model="tableheaderselected"
+                            ng-click="onCheckboxClick()"></th>
+              <th>Object</th>  
+              <th>Date de debut</th>
+              <th>Date de Fin</th>
+              <th>Lieu</th>
+              <th>Durée</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <tr style="cursor: pointer;" ng-repeat=" event in events" >
+             <td><input type="checkbox" ng-model="event.selected"  ng-click="onRowCheckboxClick(event)"></td>
+             <td ng-click="switchToEdit(event)">{{event.title}}</td>
+              <td ng-click="switchToEdit(event)">{{event.start | date:"dd/MM/yyyy hh:mm:ss"}}</td>
+              <td ng-click="switchToEdit(event)">{{event.end  | date:"dd/MM/yyyy hh:mm:ss"}}</td>
+              <td ng-click="switchToEdit(event)">{{event.lieu}}</td>
+              <td ng-click="switchToEdit(event)">{{event.duree}}</td>
+<!--              <td ng-click="switchToEdit(event)">{{event.title}}</td>-->
+           </tr>
+        </tbody>
+    </table>     
+</div>

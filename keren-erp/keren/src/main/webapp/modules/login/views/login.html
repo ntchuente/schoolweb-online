@@ -1,0 +1,74 @@
+<!--<!DOCTYPE html>
+<html ng-app="keren.core.login">
+<head>
+    <title>AngularJS Demo</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet" />
+    <link href="css\bootstrap-theme.css" rel="stylesheet" />
+    <link href="modules\login\css\login.css" rel="stylesheet" />
+    <script src="lib\angular\angular.js"></script>
+    <script src="lib\angular\angular-resource.js"></script>	
+    <script src="lib\angular\angular-route.min.js"></script>
+    <script src="lib\angular\angular-cookies.min.js"></script>
+    <script src="modules\login\js\controllers.js"></script>
+    <script src="modules\commons\js\commons.js"></script>
+    <script src="modules\login\js\services.js"></script>
+    
+  <script src="js\services.js"></script>	
+</head>
+<body ng-controller="loginCtrl">-->
+    <!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <link rel="stylesheet" href="modules\login\css\font-awesome.min.css">
+    <link href="modules\login\css\login_1.css" rel="stylesheet" />
+    <link href="modules\login\css\styleResponsive_1.css" rel="stylesheet" />
+    
+    <div id="loginPageContent" ng-controller="loginCtrl">
+        <div id="loginPanel">
+            <span id="loginPanelPart01"> 
+                <div id="loginPanelPart01Division01">
+                        <span id="titrePart01"></span>
+                        <span id="titrePart02"></span>
+                </div>
+                <div id="loginPanelPart01Division02"></div>
+            </span>
+                <span id="loginPanelPart02"></span>
+                <span id="loginPanelPart03"> 
+                    <div id="loginPanelPart03Division01">
+                    
+                    <i class='fa fa-users'></i></div>
+                    <div id="loginPanelPart03Division02">
+                        <div id="emailInputEtLogoContent" >
+                            <span class="logoputContent"><i class='fa fa-user'title="Login utilisateur"></i></span>
+                            <span id="emailInputContent"><input id="emailInput" type='text' placeholder="Adresse Mail" ng-model="username"></span>
+                        </div>
+                    </div>
+                    <div id="loginPanelPart03Division03">
+                        <div id="passwordInputEtLogoContent" >
+                            <span class="logoputContent"><i class='fa fa-lock' title="Mot de passe utilisateur" rel="tooltip"></i></span>
+                            <span id="passwordInputContent"><input id="passwordInput" type='password' placeholder="Mot de Passe" ng-model="password"></span>
+                        </div>
+                    </div>
+                     <div id="loginPanelPart03Division04">
+                        <div id="passwordInputEtLogoContent" >
+                            <span class="logoputContent"><i class='fa fa-calendar' title="Annee Scolaire "></i></span>
+                          <span class="selectInputContent">
+                          	<select id=selectInput name="example" placeholder="Annee Scolaire" ng-model="anneescolaire" >
+  								<option ng-selected= "{{value.id== anneescolaire}}" ng-repeat="value in anneescolaires"  value="{{value.id}}">
+  								 	{{value.designation}}     
+            				  </option>
+							</select>
+						 </span>
+                        </div>
+                    </div>
+                    <div id="loginPanelPart03Division04">
+                        <span id="connexionbouttonContent" ng-click="login()">Connexion</span>
+                    </div>
+                </span>
+        </div>
+    </div>
+    <div id="footerContent">By won@it</div>
+    
+    
+    

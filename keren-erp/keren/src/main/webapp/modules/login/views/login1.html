@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>
+<html ng-app="keren.core.login">
+<head>
+    <title>AngularJS Demo</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet" />
+    <link href="css\bootstrap-theme.css" rel="stylesheet" />
+    <link href="modules\login\css\login.css" rel="stylesheet" />
+    <script src="lib\angular\angular.js"></script>
+    <script src="lib\angular\angular-resource.js"></script>	
+    <script src="lib\angular\angular-route.min.js"></script>
+    <script src="lib\angular\angular-cookies.min.js"></script>
+    <script src="modules\login\js\controllers.js"></script>
+    <script src="modules\commons\js\commons.js"></script>
+    <script src="modules\login\js\services.js"></script>
+    
+  <script src="js\services.js"></script>	
+</head>
+<body ng-controller="loginCtrl">-->
+    <!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <link href="modules\login\css\login.css" rel="stylesheet" /> 
+     <div ng-controller="loginCtrl">
+        <form name="loginform" role="form" novalidate>   
+            <div class="container">
+                <div class="card card-container">
+                    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                    <img id="profile-img" class="profile-img-card" src="modules\login\img\avatar_2x.png" />
+                    <p id="profile-name" class="profile-name-card"></p>
+                    <form class="form-signin">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="username" required autofocus>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="password" required>
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me" ng-model="remember"> Remember me
+                            </label>
+                        </div>
+                        <button type=button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="login()">Sign in</button>
+                    </form><!-- /form -->
+                    <a href="#" class="forgot-password">
+                        Forgot the password?
+                    </a>
+                </div><!-- /card-container -->
+            </div><!-- /container -->
+        </form>
+     </div>
+<!--  </body>
+</html>-->

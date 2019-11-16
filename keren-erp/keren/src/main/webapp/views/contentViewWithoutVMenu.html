@@ -1,0 +1,81 @@
+<div class="col-sm-12  col-md-12  main">
+   <div class="panel panel-default">
+          <div>
+             <nav id="listebar" class="navbar navbar-default"  role="navigation">
+               <div class="navbar-header">
+                  <button type="button"  class="navbar-toggle" data-toggle="collapse"  data-target="#Navbar">
+                      <span class="sr-only">Toggle Navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a  class="navbar-brand" href="#">Titre Panel</a>
+               </div>
+               <form class="navbar-form navbar-right">                  
+                      <button type="button"  class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="false"  aria-expanded="true" id="filtertbtn">
+                              Filtre Recherches
+                              <span class="caret"></span>                                                 
+                      </button>  
+                      <ul class="dropdown-menu"  role="menu"  aria-labelledby="filtertbtn">  
+                         <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">
+                               Action 1
+                            </a>                            
+                         </li>
+                         <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">
+                               Action 2
+                            </a>                            
+                         </li>
+                      </ul>   
+                       <input type="text" class="form-control" placeholder="Search...">
+                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>       
+                  
+               </form> 
+             </nav>
+             <div class="btn-toolbar" role="toolbar"  aria-label="Toolbar1">
+                  <div class="btn-group"  role="group"  aria-label="group 1">
+                      <button type="button"  class="btn btn-default">Creer</button>
+                       <button type="button"  class="btn btn-default">Importer</button>
+                   </div>
+                 
+                   <div class="btn-group  "    role="group"  aria-label="group 2" nq>
+                      <button type="button"  class="btn btn-default">Imprimer</button>
+                      <button type="button"  class="btn btn-default">Actions</button>
+                   </div>
+                  <span class="pull-right">
+                        <div class="btn-group"  role="group"  aria-label="group 3">
+                          <span class="btn btn-default">(2/5)</span>
+                          <button type="button"  class="btn btn-default">
+                             <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                          </button>  
+                          <button type="button"  class="btn btn-default">
+                             <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                          </button>                   
+                       </div> 
+                  </span>         
+             </div>
+          </div>
+          <div class="panel-body">
+              <table class="table table-striped table-hover table-responsive">
+                  <thead>
+                      <tr>
+                        <th><input type="checkbox" ng-model="module.selected"
+                                   ng-click="onCheckboxClick()"></th>
+                        <th>Module Name</th>     
+                        <th>Module Description</th>                            
+                      </tr>
+                  </thead>
+                  <tbody>
+                     <tr ng-repeat=" module in modules">
+                       <td><input type="checkbox" ng-model="module.selected"></td>
+                        <td>{{module.name}}</td>
+                        <td>{{module.shortDescription}}</td>
+                     </tr>
+                  </tbody>
+              </table>
+              
+          </div>          
+       </div>
+</div>

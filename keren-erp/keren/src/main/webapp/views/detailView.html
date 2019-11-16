@@ -1,0 +1,288 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 " style="position: absolute;width: 83%;height: 89.8%;background-color: red">    
+    <div class="panel panel-default" id="innerpanel" style="padding:0;height:100%;background-color: orange">
+      <div class="panel-container" style="height: 100% ;border:0px;">
+         <nav id="listebar" class="navbar navbar-default detail-heading"  role="navigation">
+             <div class="navbar-header  col-sm-12  col-md-12">
+                <button type="button"  class="navbar-toggle" data-toggle="collapse"  data-target="#Navbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  class="navbar-brand" href="#">{{metaData.editTitle}}</a>
+             </div> 
+             <div class="btn-toolbar" role="toolbar"  aria-label="Toolbar1">
+                <div class="btn-group"  role="group"  aria-label="group 1"     ng-hide="isviewOperation()">
+                    <button type="button"  class="btn btn-primary btn-sm" ng-click ="saveOrUpdate()">Enregistrer</button>                    
+                 </div>
+
+                 <div class="btn-group"  role="group"  aria-label="group 1">                    
+                    <button type="button"  class="btn btn-default btn-sm" ng-click="annulerAction()">Annuler</button>
+                 </div>
+               
+                 <div class="btn-group  dropdown"    role="group"  aria-label="group 2"   ng-hide="iscreateOperation()">                     
+                      <button type="button"  class="btn btn-default dropdown dropdown-toggle btn-sm" data-toggle="dropdown"
+                                            aria-haspopup="false"  aria-expanded="true" id="imprimerbtn">
+                           Imprimer
+                           <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn">  
+                         <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">
+                               Imprimer
+                            </a>                            
+                         </li>                         
+                      </ul>                        
+                 </div>
+
+                 <div class="btn-group  dropdown"    role="group"  aria-label="group 2"   ng-hide="iscreateOperation()">                     
+                     <button type="button"  class="btn btn-default btn-sm dropdown dropdown-toggle" data-toggle="dropdown"
+                                            aria-haspopup="false"  aria-expanded="true" id="actionsbtn">
+                                          Actions
+                          <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu"  role="menu"  aria-labelledby="actionsbtn">  
+                         <li role="presentation"  ng-hide="isupdateOperation()">
+                            <a role="menuitem" tabindex="-1" href="#"  ng-click="updateAction()">
+                               Modifier
+                            </a>                            
+                         </li>
+                         <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#"  ng-click="deleteAction()">
+                               Supprimer
+                            </a>                            
+                         </li>
+                      </ul>                      
+                 </div>
+                 <span class="pull-right">
+                      <div class="btn-group"  role="group"  aria-label="group 3">
+                        <span class="btn btn-default btn-sm">{{pagination.currentPage}} / {{pagination.totalPages}}</span>
+                        <button type="button"  class="btn btn-default  btn-sm">
+                           <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                        </button>  
+                        <button type="button"  class="btn btn-default btn-sm">
+                           <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                        </button>                   
+                     </div> 
+                </span>              
+
+             </div>       
+         </nav>
+
+         
+      
+
+      <div class="panel-body panel-container" style="padding:0;border:0px;height:85%;overflow-y:auto; margin-top: -1.5%;" >
+           <div class="panel panel-default col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1" >
+               <div class="panel-body"  id="detail-panel-body">
+                   <form role="form" class="form-horizontal"  name="myForm" novalidate>
+                       <span style="display: inline-block;margin-right: 20px;width: 48%;">
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <img src="img\photo.png"  class="img-responsive" alt="Image ">
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="name">Nom</label>
+                             <input type="text" class="form-control"  id="name" placeholder="Votre Nom" ng-required="true" ng-minlength="2">
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="birthday">Date de Naissance</label>
+                             <input type="date" class="form-control"  id="birthday" placeholder="Votre Nom">
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="sexe">Sexe</label>
+                             <div class="input-group">
+                                 <select class="form-control"  data-style="btn-default">
+                                     <option>Masculin</option>
+                                     <option>Feminin</option>                                 
+                                 </select>
+                                 <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default my-group-button" data-toggle="modal" data-target="#myModal">
+                                      <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                                    </button>
+                                </span>
+                             </div>
+                         </div>
+                       </span>
+                       <span style="display: inline-block;width: 48%;">
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="description">Description</label>
+                             <input type="text" class="form-control"  id="description" placeholder="Votre Description" ng-minlength="3">
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="heurenaissance">Heure de Naissance</label>
+                             <input type="time" class="form-control"  id="heurenaissance" placeholder="Votre Description">
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                             <label for="sexe">Sexe</label>
+                             <div class="input-group">
+                                 <select class="selectpicker form-control"  multiple data-style="btn-default">
+                                     <option>Masculin</option>
+                                     <option>Feminin</option>                                 
+                                 </select>
+                                 <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default my-group-button" data-toggle="modal" data-target="#myModal">
+                                      <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                                    </button>
+                                </span>
+                             </div>                             
+                         </div>
+                         <div class="form-group  col-sm-12  col-md-12">
+                          <label for="actions">undefined</label>
+                          <div class="input-group" >
+                             <select class="selectpicker form-control" bootstrap-selectpicker multiple="multiple" data-style="btn-default" 
+                                 ng-model="dataSelects" ng-options="item as item.name for item in currentObject.actions" ng-click="getData(actions)" >    
+
+                             </select>                             
+                             <span class="input-group-btn">
+                              <button class="btn btn-default my-group-button" ng-click="editDialogBuilder(metaData)">
+                               <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                              </button>
+                             </span>
+                           </div>
+                         </div>
+                       </span>
+                       <div class="table-responsive">                        
+                         <table class="table  table-striped table-bordered table-hover table-condensed">
+                              <thead>
+                                  <tr style="font-weight: bold;">
+                                      <th>Nom Module</th>
+                                      <th>Description</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <ul class="nav navbar-nav">
+                                     <li>
+                                       <a href="#"   data-toggle="modal"  data-target="#myModal"  ng-click="editDialogBuilder()">
+                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                       </a>
+                                     </li>
+                                     <li>
+                                       <a href="#" data-toggle="modal"  data-target="#myModal">
+                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                       </a>
+                                     </li>
+                                     <li>
+                                       <a href="#">
+                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                       </a>
+                                     </li>
+                                     <li>
+                                       <a href="#"  data-toggle="modal"  data-target="#myModal">
+                                         <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                       </a>
+                                     </li>
+                                  </ul>
+                                </tr>
+                                <tr >
+                                    <td>GC</td>
+                                    <td>Gestion Commerciale</td>
+                                </tr>
+                                <tr>
+                                    <td>MT</td>
+                                    <td>Gestion de la maintenance</td>
+                                </tr>
+                              </tbody>
+                         </table>
+                       </div>
+                       <div  role="tabpanel">
+                           <ul class="nav  nav-tabs"  role="tablist">
+                              <li role="presentation">
+                                 <a href="#profile"  aria-control="profile"  role="tab"  data-toggle="tab">
+                                   Onglet 1
+                                 </a>
+                              </li>
+                              <li role="presentation">
+                                 <a href="#message"  aria-control="message"  role="tab"  data-toggle="tab">
+                                   Onglet 2
+                                 </a>
+                              </li>
+                           </ul>
+                           <div class="tab-content">
+                             <div role="tabpanel"  class="tab-pane active"  id="profile" >
+                                 Conteneur 1
+                             </div>
+                              <div role="tabpanel"  class="tab-pane"  id="message" >
+                                     
+                             </div>
+                           </div>
+                       </div>
+                   </form>
+                </div>              
+           </div>
+           <div class="col-sm-12 col-md-12" style="background-color: white;"   ng-hide="iscreateOperation()">
+                   <div class="panel-heading">
+                        <div class="btn-group"  role="group"  aria-label="group 1">
+                          <button type="button"  class="btn btn-primary btn-sm" ng-click ="messagesAction()">Nouveau Message</button>                    
+                       </div>
+                       <div class="btn-group"  role="group"  aria-label="group 1" style="margin-left: 10px;">
+                          <a href="#"  class="a-sm" style="border:none;text-decoration: none;" ng-click ="notesInterneAction()">Enregistrer une note interne</a>                    
+                       </div>
+                      <span class="pull-right">
+                             <div class="btn-group"  role="group"  aria-label="group 1" style="right: 150px;">
+                                <button type="button"  class="btn btn-default btn-sm" ng-click ="suivreAction()" ng-if="currentObject.suiviActive==false">
+                                     Suivre
+                                </button> 
+                                <button type="button"  class="btn btn-default btn-sm" ng-click ="suivreAction()" ng-if="currentObject.suiviActive==true">
+                                     Abonnée(s) <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                </button>                    
+                             </div>
+                            <div class="btn-group  dropdown"    role="group"  aria-label="group 2"  style="right: 120px;">                     
+                                <a href="#"  class="dropdown dropdown-toggle btn-sm" data-toggle="dropdown"
+                                                      aria-haspopup="false"  aria-expanded="true" id="imprimerbtn">                                     
+                                     <span class="caret"></span>
+                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                </a>
+                                <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn" id="abooneesid">  
+                                   <li role="presentation">
+                                      <a role="menuitem" tabindex="-1" href="#"  ng-click="editPanelAjoutAborne()">
+                                         Ajouter des abonnées
+                                      </a>                            
+                                   </li>      
+                                   <li role="presentation">
+                                      <a role="menuitem" tabindex="-1" href="#"  ng-click="editPanelAjoutCanaux()">
+                                         Ajouter des canaux
+                                      </a>                            
+                                   </li>    
+                                   <li class="dropdown-divider"></li>                  
+                                </ul>                        
+                           </div>
+                      </span>              
+
+                   </div>
+
+                   <div class="panel-body">
+                      Corps du panel
+                   </div>
+           </div>
+           
+      </div>   
+
+     <!--  <div class="panel-footer">
+           Pied de page
+      </div>         
+   </div> -->
+</div>
+
+<!-- Fenetre Modale -->
+<div id="myModal" class="modal" role="dialog">
+   <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+            <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="modaltitle">Titre Fenetre</h4>
+        </div>
+        <div class="modal-body">
+          <div   id="modalbody">
+              
+          </div>            
+        </div>
+        <div class="modal-footer"  id="modalfooter">
+           <button class="btn btn-primary btn-sm"  ng-click="addDialogAction()">Save Change</button>
+           <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuler</button>           
+        </div>
+     </div>
+   </div>
+</div>

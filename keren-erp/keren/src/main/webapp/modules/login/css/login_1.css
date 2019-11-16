@@ -1,0 +1,303 @@
+body{
+	/*background-color:#f1f1f1;
+	overflow-x:hidden;
+	overflow-y:hidden;*/
+}
+
+#loginPageContent{
+	/*border:solid 1px red;*/
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin:0px;
+	padding-bottom:0px;
+	background-image: url("../img/23.png");
+	background-position: center center;
+	background-repeat:  repeat;
+	background-size: 100%;
+        /*margin-top: -50px; serge*/
+}
+
+#footerContent{
+	/*border:solid 1px red;*/
+	width:100%;
+	position:absolute;
+	text-align:center;
+	margin-top:40%;
+	font-size:85%;
+	color:white;
+	font-family:Roboto;
+}
+
+#loginPanel{
+	/*border:solid 1px orange;*/
+	width:70%;
+	height:50%;
+	margin:auto;
+	margin-top:9%;
+}
+
+#loginPanelPart01{
+	/*border:solid 1px orange;*/
+	width:29.4%;
+	height:100%;
+	display:inline-block;
+	vertical-align:top;
+	color:white;
+	padding-left:80px;
+}
+
+#loginPanelPart02{
+	/*border:solid 1px white;*/
+	width:0px;
+	height:100%;
+	display:inline-block;
+	vertical-align:top;
+	background-color:white;
+}
+
+#loginPanelPart03{
+	/*border:solid 1px orange;*/
+	width:49.4%;
+	height:100%;
+	color:white;
+	display:inline-block;
+	vertical-align:top;
+	/*margin-top: 2%;
+    margin-left: 2%;*/
+   /* border-radius: 3px 3px 3px 0px;
+	-moz-border-radius: 3px 3px 3px 0px;
+	-webkit-border-radius: 3px 3px 3px 0px;
+	border: 0px solid #c19340;
+    max-width: 550px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*/
+	
+	
+}
+
+#loginPanelPart01Division01{
+	/*border:solid 1px orange;*/
+	width:100%;
+	margin-top:100px;
+	background: #3677b9
+	
+}
+
+#titrePart01{
+	/*border:solid 1px orange;*/
+	font-family:Roboto;
+	font-weight:30px;
+	font-size:65px;
+}
+
+#titrePart02{
+	/*border:solid 1px orange;*/
+	font-family:Arial;
+	font-weight:bold;
+	font-size:65px;
+}
+
+#loginPanelPart01Division02{
+	/*border:solid 1px orange;*/
+	width:100%;
+	font-family:Roboto;
+	font-weight:90px;
+	font-size:14px;
+	margin-left:15px;
+}
+
+#loginPanelPart03Division01{
+	/*border:solid 1px orange;*/
+	width:100%;
+	text-align:center;
+	font-size:550%;
+	/*background-color:#3677b9;*/
+}
+
+#loginPanelPart03Division02{
+	/*border:solid 1px orange;*/
+	width:100%;
+	text-align:center;
+	margin-top:50px;
+}
+
+#loginPanelPart03Division03{
+	/*border:solid 1px orange;*/
+	width:100%;
+	text-align:center;
+	margin-top:5px;
+}
+
+#loginPanelPart03Division04{
+	/*border:solid 1px orange;*/
+	width:100%;
+	text-align:center;
+	margin-top:5px;
+}
+#loginPanelPart03Division04{
+	/*border:solid 1px orange;*/
+	width:100%;
+	text-align:center;
+	margin-top:10px;
+}
+
+#emailInputEtLogoContent{
+	/*border:solid 1px red;*/
+	width:60%;
+	margin:auto;
+	text-align:center;
+	padding:7px;
+	background-color:white;
+	border-radius:4px;
+	
+}
+
+#passwordInputEtLogoContent{
+	/*border:solid 1px red;*/
+	width:60%;
+	margin:auto;
+	text-align:center;
+	padding:7px;
+	background-color:white;
+	border-radius:4px;
+}
+
+.logoputContent{
+	/*border:solid 1px white;*/
+	width:10%;
+	display:inline-block;
+	font-size:19px;
+	color:#787878;
+}
+
+#emailInputContent{
+	/*border:solid 1px red;*/
+	width:85%;
+	display:inline-block;
+	margin:0px;
+}
+
+#passwordInputContent{
+	/*border:solid 1px red;*/
+	width:85%;
+	display:inline-block;
+	margin:0px;
+}
+
+#selectInputContent{
+	/*border:solid 1px red;*/
+	width:85%;
+	display:inline-block;
+	margin:0px;
+}
+
+#emailInput{
+	border:solid 1px transparent;
+	border-left:solid 1px #787878;
+	width:100%;
+	color:#787878;
+	font-size:15px;
+	font-family:Roboto;
+	padding:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#passwordInput{
+	border:solid 1px transparent;
+	border-left:solid 1px #787878;
+	width:100%;
+	color:#787878;
+	font-size:15px;
+	font-family:Roboto;
+	padding:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+
+#selectInput{
+	border:solid 1px transparent;
+	border-left:solid 1px #787878;
+	width:85%;
+	color:#787878;
+	font-size:15px;
+	font-family:Roboto;
+	padding:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+#connexionbouttonContent{
+	/*border:solid 1px red;*/
+	width:60%;
+	display:inline-block;
+	padding:8px;
+	font-size:15px;
+	font-family:Roboto;
+	background-color:#ec4758;
+	color:white;
+	cursor:pointer;
+	border-radius:4px;
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+@font-face{
+	font-family : 'Roboto';
+	src : url('font/RobotoLight.ttf');
+}
+
+@font-face{
+	font-family : 'aristalight';
+	src : url('font/xxx.ttf');
+}
+
+@font-face{
+	font-family : 'RobotoDraftLight';
+	src : url('font/RobotoDraftLight.ttf');
+}
+
+@font-face{
+	font-family : 'RobotoDraftThin';
+	src : url('font/RobotoDraftThin.ttf');
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #aa8d2b;
+}
+.logo-name {
+    color: #e6e6e6;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-bottom: -10px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

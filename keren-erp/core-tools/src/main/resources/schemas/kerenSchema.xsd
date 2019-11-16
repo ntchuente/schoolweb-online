@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.keren.net/keren"
+           xmlns:tns="http://www.keren.net/keren"
+           elementFormDefault="qualified">
+    <!-- Schema de Keren -->
+    <xs:element name="keren">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:action"  minOccurs="1" maxOccurs="1" />
+                <xs:element ref="tns:menu"    minOccurs="0" maxOccurs="unbounded"  />
+                <xs:element ref="tns:menuitem"    minOccurs="0" maxOccurs="unbounded"  />
+                <xs:element ref="tns:searchRecord"  minOccurs="1" maxOccurs="1" />
+                <xs:element ref="tns:formRecord"  minOccurs="1" maxOccurs="1" />
+                <xs:element ref="tns:treeRecord"  minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Schema action -->
+    <xs:element name="action">
+        <xs:complexType>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="hasmenu"  type="xs:boolean" default="true" />
+        </xs:complexType>       
+    </xs:element>
+     <!-- Schema menu -->
+    <xs:element name="menu">
+        <xs:complexType>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />
+            <xs:attribute name="hasmenu"  type="xs:boolean" default="true" />
+        </xs:complexType>
+    </xs:element>
+     <!-- Schema menuitem -->
+    <xs:element name="menuitem">
+        <xs:complexType>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />
+            <xs:attribute name="form" type="xs:string" />
+            <xs:attribute name="search" type="xs:string" />
+            <xs:attribute name="tree" type="xs:string" />
+            <xs:attribute name="calendar" type="xs:string" />
+            <xs:attribute name="kaban" type="xs:string" />
+            <xs:attribute name="hasmenu"  type="xs:boolean" default="true" />
+        </xs:complexType>
+    </xs:element>
+     <!-- Schema search record -->
+    <xs:element name="searchRecord">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>                
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />            
+        </xs:complexType>
+    </xs:element>
+     <!-- Schema search record -->
+    <xs:element name="formRecord">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header" type="xs:string"   minOccurs="0"  maxOccurs="1"/>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>   
+                <xs:element name="footer" type="xs:string"   minOccurs="0"  maxOccurs="1"/>             
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />            
+        </xs:complexType>
+    </xs:element>
+      <!-- Schema search record -->
+    <xs:element name="treeRecord">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:field"   minOccurs="1" maxOccurs="unbounded"/>                
+            </xs:sequence>
+            <xs:attribute name="id"  type="xs:string" />
+            <xs:attribute name="label"  type="xs:string" />
+            <xs:attribute name="parent" type="xs:string" />            
+        </xs:complexType>
+    </xs:element>
+     <!-- Schema field -->
+    <xs:element name="field">
+        <xs:complexType>
+            <xs:attribute name="name"  type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

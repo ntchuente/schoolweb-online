@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<script src="js\requestAppsSerge.js"></script>
+<script src="js\design_principalFragmentSerge.js"></script>
+
+<div id="entetePrincipalPanel">
+    <span id="entetePrincipalPanelPart01">
+        <span id="entetePrincipalPanelPart01LogoAndDescription">
+            <span id="entetePrincipalPanelPart01Logo"></span>
+            <span id="entetePrincipalPanelPart01Description">
+                <span id="footerPrincipalPanelTitre01">Cauris </span>
+                <span id="footerPrincipalPanelTitre02">School</span>
+            </span>
+        </span>
+        
+          <span id="entetePrincipalPanelPart01LogoAndDescription">
+            <span id="entetePrincipalPanelPart01Logo"></span>
+            <span id="entetePrincipalPanelPart01Description">
+                <span id="footerPrincipalPanelTitre01">ANNEE:: </span>
+                <span id="anneescolaire">Annee</span>
+            </span>
+        </span>
+     
+        <div id="entetePrincipalPanelPart01ElementsModule"></div>
+        
+        </span>
+     
+    </span>
+    <span id="entetePrincipalPanelPart02">
+        <span id="messagedash" class="enteteItem"><i class="fa fa-dasboard"></i></span>
+        <span id="messageLogo" class="enteteItem"><i class="fa fa-envelope"></i></span>
+        <span id="messageLogo2" class="enteteItem"><i class="fa fa-comments"></i></span>
+        <span id="notificationLogo" class="enteteItem2">
+            <span id="loginLogo" class="enteteItemLight"><i class="fa fa-user"></i></span>
+            <span id="userLogin" class="dropdown enteteItemLight2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
+                <span  id="Administration" class="administrationStyle" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
+                    <span id="loginUtilisateur">Utilisateur</span>
+                    <span class="caret"></span>
+                </span>
+                
+                <ul class="dropdown-menu listeOptionsConfigurations"  role="menu"  aria-labelledby="Administration" style="margin-left:-40px;" >
+                <li role="presentation">
+                    <a role="menuitem"   tabindex="-1" href="#" >{{'Documentation' | translate}}</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem"   tabindex="-1" href="#" >{{'Assistance' | translate}}</a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    <a role="menuitem"   tabindex="-1" href="#" >{{'Prefeference' | translate}}</a>                     
+                </li>
+                <li role="presentation">
+                    <a role="menuitem"   tabindex="-1" href="#" ng-click="updatePassword()">{{'UPPWD' | translate}}</a>                     
+                </li>
+                <li role="presentation">
+                    <a role="menuitem"   tabindex="-1" href="#" ng-click="deconnexion()">{{'Deconnexion' | translate}}</a>
+                </li>
+          </ul>
+            </span>
+            
+        </span>
+    
+    <script>
+        
+   		 //On affiche le login de l'utilisateur
+   		 $("#anneescolaire").text(USER_ANNEE);
+        //On affiche le login de l'utilisateur
+        $("#loginUtilisateur").text(USER_LOGIN);
+        
+        //On manage les evenements
+        $("#entetePrincipalPanelPart01Logo").click(function(e) {
+            
+            //On vide le panel de donnees
+            $("#container").html("");
+            
+            //on reaffiche le panel principal
+            afficherPanelHide();
+        });
+		
+        $("#entetePrincipalPanelPart01Description").click(function(e) {
+
+            //On decide s'il faut afficher ou cacher la barre de menus
+            afficherOuCacherMenuGaucheResponsive(defaultResolutionSmallScreen);
+
+        });
+    </script>
+</div>
+
+
+<div id="principalePanel">
+    <div id='bodyPrincipalPanel'>
+        <div id="bodyPrincipalPanelPart01"></div>
+        <div id="bodyPrincipalPanelPart02">
+            <div id="bodyPrincipalPanelPart02Special" >
+                
+                
+                
+                <div id="{{module.id}}_moduleItem" ng-click="getModule(module)"  class="moduleItem" ng-repeat="module in modules" rel="tooltip" data-original-title="{{module.shortDescription | translate}}">
+                    <div id="{{module.id}}_moduleItemLogo" class="moduleItemLogo"><i class="{{module.icon}}"></i></div>
+                    <div id="{{module.id}}_moduleItemDescription" class="moduleItemDescription">{{module.label}}</div>
+                    
+                    <script>
+                        
+                        //On applique les styles et les evenemeents
+                        chargerLesModules();
+                    </script>
+                </div>
+                
+                <!-- MODULE  APPLICATIONS-->
+                <div id="applicationModule_moduleItem" ng-hide="hideApplicationModule()" ng-click="applicationModule()"  class="moduleItem" rel="tooltip" data-original-title="{{'APPLI_DESC' | translate}}">
+                    <div id="applicationModule_moduleItemLogo" class="moduleItemLogo"><i class="fa fa-list"></i></div>
+                    <div id="applicationModule_moduleItemDescription" class="moduleItemDescription">Applications</div>
+                    
+                    <script>
+                        
+                        //On applique les styles et les evenemeents
+                        chargerApplicationModule();
+                    </script>
+                </div>
+                
+                <!-- MODULE  CONFIGURATION-->
+                <div id="configurationModule_moduleItem" ng-hide="hideConfiguration()" ng-click="configurationModuleAction()"  class="moduleItem" rel="tooltip" data-original-title="{{'CONFIG_DESC' | translate}}">
+                    <div id="configurationModule_moduleItemLogo" class="moduleItemLogo"><i class="fa fa-cog"></i></div>
+                    <div id="configurationModule_moduleItemDescription" class="moduleItemDescription">Configurations</div>
+                    
+                    <script>
+                        
+                        //On applique les styles et les evenemeents
+                        chargerConfigurationModule();
+                    </script>
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>
+    <div id='footerPrincipalPanel'></div> 
+</div>
+
+<!--<nav id="barMenuHorizontal" class="navbar navbar-inverse navbar-fixed-top navbar-sm" style="display: none">
+     
+    <ul class="nav navbar-nav "  ng-repeat=" module in modules">
+        <li id="{{module.id}}_moduleId" ng-class="{'active':module.name==currentModule.name}">
+                  <a  href="#" id="{{module.id}}_moduleLienId"  ng-click="getModule(module)"   data-toggle="tooltip" data-placement="auto" title="{{module.shortDescription | translate}}" >{{module.label}}</a>
+        </li>           
+    </ul>
+ 
+</nav>-->
+   
+<div id="pageModule" >
+    
+     <ng-include src="'views/verticalMenuView.html'"  ng-show = "enabledVerticalMenu == true"></ng-include>
+     <header-builder entity-metadata="{{metaData}}"  full-screen="{{enabledVerticalMenu}}" 
+                   select-action="{{currentAction}}"     data-value="{{modules}}"   ng-show="hideOther==false">             
+     </header-builder>        
+  
+</div>
+<div id="tchatBodyContent" style="border:solid 1px green;position:fixed;z-index:9000; width:100%;top:100%;text-align:right;background-color:white;display: none"></div>;

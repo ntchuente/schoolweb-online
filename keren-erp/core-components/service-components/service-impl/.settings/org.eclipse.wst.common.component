@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="service-impl">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="core-model-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/core-model/core-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="manager-ifaces-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-ifaces/manager-ifaces">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="service-ifaces-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/service-ifaces/service-ifaces">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="manager-impl-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-impl/manager-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dao-ifaces-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dao-ifaces/dao-ifaces">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dao-impl-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dao-impl/dao-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="core-tools-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/core-tools/core-tools">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="kerencore"/>
+        <property name="java-output-path" value="/service-impl/target/classes"/>
+    </wb-module>
+</project-modules>

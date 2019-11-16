@@ -1,0 +1,149 @@
+   <div class="col-sm-3 col-md-2 sidebar">      
+      <ul class="nav nav-sidebar" ng-repeat="action in currentModule.actions">
+        <li><a href=""  ng-click="getSelectAction(action)">{{action.name}}</a></li>            
+      </ul>         
+   </div>
+   
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 container-panel" style="position: absolute;width: 83%;height: 89%;" id="container">
+        <div class="panel panel-default container-panel"  id="innerpanel" style="height: 100%;width: 100%;background-color: red;">          
+          <div class="container-heading-panel">
+             <nav id="listebar" class="navbar navbar-default container-heading-panel"  role="navigation">
+                <div class="col-sm-12  col-md-12  nav nav-justified navbar-nav container-heading-panel">
+                     <div class="navbar-header col-sm-6 col-md-5  container-heading-panel">
+                        <button type="button"  class="navbar-toggle" data-toggle="collapse"  data-target="#Navbar">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a  class="navbar-brand" href="#">{{metaData.listTitle}}</a>
+                     </div>
+                     <div class="col-sm-6 col-md-7  container-heading-panel">
+                         <form class="navbar-form navbar-search  navbar-right" role="Search" id="filtercontainer" style="width: 100%;" > 
+                            <div class="input-group" style="width: 100%;">                     
+                                <span class="input-group-btn pull-left"  style="display: inline-block;width: 20%;">
+                                      <button type="button" class="btn btn-search btn-sm btn-default dropdown-toggle" data-toggle="dropdown" id="filtertbtn" style="width: 100%;">
+                                          <span class="glyphicon glyphicon-filter"></span>
+                                          <span class="label-icon">Filtres</span>
+                                          <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu" role="menu"  id="filterActionsId">
+                                         <li>
+                                              <a href="#">
+                                                  <!-- <span class="glyphicon glyphicon-user"></span>
+                                                  <span class="label-icon">Search By User</span> -->
+                                                  <span>
+                                                    <input type="text" style="border: none;">
+                                                    <input type="checkbox" name="name" ng-model="checkbox01">
+                                                  </span>
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="#">
+                                              <span class="glyphicon glyphicon-book"></span>
+                                              <span class="label-icon">Search By Organization</span>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                </span>                                                               
+                               <span class="input-group-btn  pull-left" style="display: inline-block;width: 80%;">
+                                    <input type="text" ng-model="searchCriteria" class="form-control input-sm" style="width: 93%;">                                       
+                                    <button type="button" class="btn btn-search btn-sm btn-default"  ng-click="searchAction()">
+                                      <span class="glyphicon glyphicon-search"></span>
+                                    </button>                           
+                              </span>
+                              
+                            </div>           
+                            
+                        </form> 
+                     </div>
+                    <br /><br /><br />
+                    <div class="btn-toolbar" role="toolbar"  aria-label="Toolbar1">
+                       <div class="btn-group"  role="group"  aria-label="group 1">
+                          <button type="button"  class="btn btn-primary btn-sm" ng-click="addElementAction()">Creer</button>                        
+                       </div>
+
+                       <div class="btn-group"  role="group"  aria-label="group 1">
+                          <button type="button"  class="btn btn-default btn-sm"  ng-click="importAction()"  id="importerbtn">Importer</button>
+                       </div>
+                   
+                       <div class="btn-group  dropdown"    role="group"  aria-label="group 2" >                     
+                            <button type="button"  class="btn btn-default btn-sm dropdown dropdown-toggle" data-toggle="dropdown"
+                                                  aria-haspopup="false"  aria-expanded="true" id="imprimerbtn">
+                                 Imprimer
+                                 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn">  
+                               <li role="presentation">
+                                  <a role="menuitem" tabindex="-1" href="#">
+                                     Imprimer 
+                                  </a>                            
+                               </li>                             
+                            </ul>                        
+                       </div>
+
+                       <div class="btn-group  dropdown"    role="group"  aria-label="group 2" >                     
+                           <button type="button"  class="btn btn-default btn-sm dropdown dropdown-toggle" data-toggle="dropdown"
+                                                  aria-haspopup="false"  aria-expanded="true" id="actionsbtn"  ng-hide="selectedObjects.length==0">
+                                                Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu"  role="menu"  aria-labelledby="actionsbtn">  
+                               <li role="presentation">
+                                  <a role="menuitem" tabindex="-1" href="#"  ng-click="exportAction()">
+                                     Exporter
+                                  </a>                            
+                               </li>
+                               <li role="presentation">
+                                  <a role="menuitem" tabindex="-1" href="#"  ng-click="updateAction()">
+                                     Modifier
+                                  </a>                            
+                               </li>
+                               <li role="presentation">
+                                  <a role="menuitem" tabindex="-1" href="#"  ng-click="deleteAction()">
+                                     Supprimer
+                                  </a>                            
+                               </li>
+                            </ul>                      
+                       </div>
+
+                        <span class="pull-right">
+                              <div class="btn-group"  role="group"  aria-label="group 3">
+                                <span class="btn btn-default btn-sm">{{pagination.currentPage}} / {{pagination.totalPages}} </span>
+                                <button type="button"  class="btn btn-default btn-sm">
+                                   <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                                </button>  
+                                <button type="button"  class="btn btn-default btn-sm">
+                                   <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                                </button>                   
+                             </div> 
+                        </span>
+
+             </div>
+           </div>
+        </nav>
+      </div>      
+
+
+          <div class="panel-body container-body-panel"  id="datatable" style="height: 82%;overflow: auto;margin-top: -8%;">
+              <table class="table table-striped table-hover table-responsive table-sm  table-header"  style="margin-top: -10px;" id="table">
+                  <thead>
+                      <tr id="rowheader">
+                        <th><input type="checkbox" ng-model="tableheaderselected"
+                                      ng-click="onCheckboxClick()"></th>
+                        <th>Module Name</th>  
+                        <th>Module Description</th>                       
+                      </tr>
+                  </thead>
+                  <tbody id="tablebody">
+                     <tr  ng-repeat=" module in modules" >
+                       <td><input type="checkbox" ng-model="module.selected"  ng-click="onRowCheckboxClick(module)"></td>
+                        <td>{{module.name}}</td>
+                        <td>{{module.shortDescription}}</td>
+                     </tr>
+                  </tbody>
+              </table>
+              
+          </div>          
+       </div>
+    </div>

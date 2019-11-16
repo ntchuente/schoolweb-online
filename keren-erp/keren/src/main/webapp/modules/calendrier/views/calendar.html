@@ -1,0 +1,366 @@
+<nav id="listebar" class="navbar navbar-default container-heading-panel"  role="navigation">
+        <div class="col-sm-12  col-md-12  nav nav-justified navbar-nav container-heading-panel">
+             <div class="navbar-header col-sm-6 col-md-5  container-heading-panel">
+                <button type="button"  class="navbar-toggle" data-toggle="collapse"  data-target="#Navbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  class="navbar-brand" href="#">{{metaData.listTitle}}</a>
+             </div>
+<!--             <div class="col-sm-6 col-md-7  container-heading-panel" >
+                 <form class="navbar-form navbar-search  navbar-right" role="Search" id="filtercontainer" style="width: 100%;" > 
+                    <div class="input-group" style="width: 100%;">                     
+                        <span class="input-group-btn pull-left"  style="display: inline-block;width: 20%;">
+                              <button type="button" class="btn btn-search btn-sm btn-default dropdown-toggle" data-toggle="dropdown" id="filtertbtn" style="width: 100%;">
+                                  <span class="glyphicon glyphicon-filter"></span>
+                                  <span class="label-icon">Filtres</span>
+                                  <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu"  id="filterActionsId">
+                                 <li>
+                                      <a href="#">
+                                           <span class="glyphicon glyphicon-user"></span>
+                                          <span class="label-icon">Search By User</span> 
+                                          <span>
+                                            <input type="text" style="border: none;">
+                                            <input type="checkbox" name="name" ng-model="checkbox01">
+                                          </span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#">
+                                      <span class="glyphicon glyphicon-book"></span>
+                                      <span class="label-icon">Search By Organization</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                        </span>                                                               
+                       <span class="input-group-btn  pull-left" style="display: inline-block;width: 80%;">
+                            <input type="text" ng-model="searchCriteria" class="form-control input-sm" style="width: 93%;">                                       
+                            <button type="button" class="btn btn-search btn-sm btn-default"  ng-click="searchAction()">
+                              <span class="glyphicon glyphicon-search"></span>
+                            </button>                           
+                      </span>
+
+                    </div>           
+
+                </form> 
+             </div>-->
+            <br /><br /><br />
+            <div class="btn-toolbar" role="toolbar"  aria-label="Toolbar1">
+               <div class="btn-group"  role="group"  aria-label="group 1" ng-hide="listViewType=='calendar'">
+                  <button type="button"  class="btn btn-primary btn-sm" ng-click="addElementAction()" ng-hide="listViewType=='edit'">{{'Creer' | translate}}</button>         
+                  <button type="button"  class="btn btn-primary btn-sm" ng-click="saveorupdateAction()" ng-hide="listViewType=='list'">{{'Enregistrer' | translate}}</button> 
+               </div>
+
+               <div class="btn-group"  role="group"  aria-label="group 1" ng-hide="listViewType=='calendar'">
+                   <button type="button"  class="btn btn-default btn-sm"  ng-click="importAction()"  id="importerbtn" ng-hide="listViewType=='edit'">{{'Importer' | translate}}</button>
+                  <button type="button"  class="btn btn-default btn-sm"  ng-click="annulerAction()"  id="importerbtn" ng-hide="listViewType=='list'">{{'Quitter' | translate}}</button>
+               </div>
+
+<!--                <div class="btn-group  dropdown"    role="group"  aria-label="group 2" ng-hide="listViewType=='calendar'||(listViewType=='edit' && windowType=='new')">                     
+                    <button type="button"  class="btn btn-default btn-sm dropdown dropdown-toggle" data-toggle="dropdown"
+                                          aria-haspopup="false"  aria-expanded="true" id="imprimerbtn">
+                         Imprimer
+                         <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn">  
+                       <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#">
+                             Imprimer 
+                          </a>                            
+                       </li>                             
+                    </ul>                        
+               </div>
+
+               <div class="btn-group  dropdown"    role="group"  aria-label="group 2"  ng-hide="listViewType=='calendar' ||  (listViewType=='edit' && windowType=='new')||(selectedObjects.length==0)">                     
+                   <button type="button"  class="btn btn-default btn-sm dropdown dropdown-toggle" data-toggle="dropdown"
+                                          aria-haspopup="false"  aria-expanded="true" id="actionsbtn"  ng-hide="selectedObjects.length==0">
+                                        Actions
+                        <span class="caret"></span>
+                    </button>
+                   <ul class="dropdown-menu"  role="menu"  aria-labelledby="actionsbtn">  
+                       <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#"  ng-click="exportAction()">
+                             Exporter
+                          </a>                            
+                       </li>
+                       <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#"  ng-click="updateAction()">
+                             Modifier
+                          </a>                            
+                       </li>
+                       <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#"  ng-click="deleteAction()">
+                             Supprimer
+                          </a>                            
+                       </li>
+                    </ul>                      
+               </div>-->
+               <span  class="pull-right">
+                    <span>
+<!--                          <div class="btn-group"  role="group"  aria-label="group 3" ng-hide="listViewType=='calendar' || listViewType=='edit'">
+                            <span class="btn btn-default btn-sm">{{pagination.currentPage}} / {{pagination.totalPages}} </span>
+                            <button type="button"  class="btn btn-default btn-sm">
+                               <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                            </button>  
+                            <button type="button"  class="btn btn-default btn-sm">
+                               <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                            </button>                   
+                         </div> -->
+                        <div class="btn-group"  role="group"  aria-label="group 3" ng-hide="listViewType=='edit'">
+                              <button type="button"  class="btn btn-default btn-sm" ng-click="switchToCalendar()">
+                               <span class="glyphicon glyphicon-calendar"  aria-hidden="true"></span>
+                            </button>  
+                            <button type="button"  class="btn btn-default btn-sm" ng-click="switchToList()">
+                               <span class="glyphicon glyphicon-list"  aria-hidden="true"></span>
+                            </button>                   
+                         </div> 
+                    </span>                    
+               </span>
+
+     </div>
+   </div>
+</nav>
+
+<div class="col-sm-12  col-md-12">
+    <ng-view />
+<!--    <div id="calendar-list">
+        <ng-include src="'modules/calendrier/views/calendarListPanel.html'"  ng-show = "listViewType=='list'"></ng-include>
+    </div>-->
+</div>
+<!-- Fenetre Modale -->
+<div id="myModal00" class="modal" role="dialog">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+        <div class="modal-header">
+            <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="modaltitle">PARTICIPANTS</h4>
+        </div>
+        <div class="modal-body">
+            <table class="table table-sm table-striped table-hover table-responsive">
+                <thead>
+                    <tr class="table-header">
+                        <th>
+                            <input type="checkbox" ng-model="tableheaderselected">
+                        </th>
+                        <th>Nom</th>
+                        <th>ADRESSE ELECTRONIQUE</th>
+                        <th>SOCIETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in dataCache.utilisateur" style="cursor: pointer">
+                        <td>
+                            <input type="checkbox" ng-model="item.selected"  ng-click="onRowCheckboxClickDialog(item)"> 
+                        </td>
+                        <td>{{item.intitule}}</td>
+                        <td>{{item.courriel}}</td>
+                        <td>{{item.societeCourante.designation}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer" >
+           <button class="btn btn-primary btn-sm"  ng-click="addDialogAction()">Save Change</button>
+           <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuler</button>           
+        </div>
+     </div>
+   </div>
+</div>
+<!-- Fenetre Modale -->
+<div id="myModal002" class="modal" role="dialog">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+        <div class="modal-header">
+            <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="modaltitle">Rappel</h4>
+        </div>
+        <div class="modal-body">
+             <span style="display: inline-block;margin-right: 20px;width: 48%;">
+                <div class="form-group  col-sm-12  col-md-12">
+                    <label for="name">Titre</label>
+                    <input type="text" class="form-control"  id="name" placeholder="Titre du rappel" 
+                           ng-required="true" ng-minlength="2"  ng-model="dataCache.crrentRappel.titre">
+                </div>   
+                <div class="form-group  col-sm-12  col-md-12">
+                    <label for="name">Quantite</label>
+                    <input type="number" class="form-control"  id="name" placeholder="Quantite" 
+                           ng-required="true"  ng-model="dataCache.crrentRappel.quantite">
+                </div>
+              </span>
+            <span style="display: inline-block;width: 48%;">                         
+                <div class="form-group  col-sm-12  col-md-12">
+                    <label for="sexe">Unite</label>
+                    <div class="input-group">
+                        <select class="selectpicker form-control" data-style="btn-default" ng-model="dataCache.crrentRappel.unite">
+                            <option value="0">Minute(s)</option>
+                            <option value="1">Heure(s)</option>
+                            <option value="2">Jour(s)</option>
+                        </select>
+                        <span class="input-group-btn">
+                           <button type="button" class="btn btn-default my-group-button" data-toggle="modal" data-target="#myModal">
+                             <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                           </button>
+                       </span>
+                    </div>                             
+                </div>                
+            </span>            
+        </div>
+        <div class="modal-footer"  id="modalfooter">
+           <button class="btn btn-primary btn-sm"  ng-click="addRappel()">Save Change</button>
+           <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuler</button>           
+        </div>
+     </div>
+   </div>
+</div>
+<!--Angular template for modal dialog code structure starts here-->
+<div id="eventModal" class="modal" role="dialog">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title">Events</h3>
+            </div>
+            <div class="modal-body">
+                <div style="color:red">{{Message}}</div>
+                <div class="form-group  col-sm-12  col-md-12">
+                    <label>Titre evenement</label>
+                    <input type="text" ng-model="NewEvent.Title" autofocus class="form-control input-sm"/>
+                </div>
+                <div class="form-group form-group-sm  col-sm-12  col-md-12">
+                    <label for="sexe">Participants</label>
+                    <div class="input-group">
+                        <select class="selectpicker form-control"  multiple data-style="btn-default"  class="input-sm">
+                            <option>Masculin</option>
+                            <option>Feminin</option>                                 
+                        </select>
+                        <span class="input-group-btn">
+                           <button type="button" class="btn btn-default my-group-button btn-sm" data-toggle="modal" data-target="#myModal">
+                             <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                           </button>
+                       </span>
+                    </div>                             
+                </div>
+                <div  role="tabpanel">
+                    <ul class="nav  nav-tabs"  role="tablist">
+                       <li role="presentation">
+                          <a href="#profile"  aria-control="profile"  role="tab"  data-toggle="tab">
+                            Date de l'evenement
+                          </a>
+                       </li>
+                       <li role="presentation">
+                          <a href="#message"  aria-control="message"  role="tab"  data-toggle="tab">
+                            Options
+                          </a>
+                       </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div role="tabpanel"  class="tab-pane active"  id="profile" >
+                          <span style="display: inline-block;margin-right: 20px;width: 48%;">
+                              <div class="form-group-sm  col-sm-12  col-md-12">
+                                <label>Date et heure de debut </label>
+                                <input type=datetime-local  autofocus class="form-control input-sm"  />
+                              </div>
+                              <div class="form-check col-sm-12  col-md-12">
+                                  <label class="form-check-label" for="fullday">Toute la journee</label>
+                                  <br/>
+                                  <input name="fullday" type=checkbox  autofocus class="form-check-label" />
+                              </div>
+                          </span>
+                          <span style="display: inline-block;width: 48%;">
+                               <div class="form-group-sm  col-sm-12  col-md-12">
+                                <label>Duree</label>
+                                <input type="time"  autofocus class="form-control input-sm"  />
+                              </div>
+                             <div class="form-group-sm  col-sm-12  col-md-12">
+                                    <label for="sexe">Rappels</label>
+                                    <div class="input-group form-group-sm">
+                                        <select class="selectpicker form-control"  multiple data-style="btn-default"  class="input-sm">
+                                            <option>15 Minutes</option>
+                                            <option>30 Minutes</option>                                 
+                                        </select>
+                                        <span class="input-group-btn">
+                                           <button type="button" class="btn btn-default my-group-button btn-sm" data-toggle="modal" data-target="#myModal">
+                                             <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                                           </button>
+                                       </span>
+                                    </div>                             
+                              </div>                                                             
+                          </span>
+                          <div class="form-group-sm">
+                            <label>Description : </label>
+                            <textarea   class="form-control" />
+                         </div>
+                          <!-- Fin  -->                                      
+                      </div>
+                       <div role="tabpanel"  class="tab-pane form-group-sm"  id="message" >
+                           <span style="display: inline-block;margin-right: 20px;width: 48%;">
+                                <div class="form-check col-sm-12  col-md-12">
+                                    <label class="form-check-label" for="fullday">Recurrent</label>
+                                    <br/>
+                                    <input name="fullday" type=checkbox  autofocus class="form-check-label" />
+                                 </div>
+                                 <div class="form-group-sm  col-sm-12  col-md-12">
+                                    <label>Lieu</label>
+                                    <input type="text"  autofocus class="form-control input-sm" />
+                                  </div> 
+                           </span>
+                           <span style="display: inline-block;width: 48%;">
+                                <div class="form-group-sm  col-sm-12  col-md-12">
+                                    <label for="sexe">Confidentialite</label>
+                                    <div class="input-group form-group-sm">
+                                        <select class="selectpicker form-control"  data-style="btn-default"  class="input-sm">
+                                            <option>Tout le monde</option>
+                                            <option>Moi seulement</option>
+                                            <option>Utilisateur interne seulement</option>
+                                        </select>   
+                                        <span class="input-group-btn">
+                                            <button disabled type="button" class="btn btn-default my-group-button btn-sm" data-toggle="modal" data-target="#myModal">
+                                             <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                                           </button>
+                                       </span>
+                                    </div>                             
+                              </div>
+                              <div class="form-group-sm  col-sm-12  col-md-12">
+                                    <label for="sexe">Afficher heure comme</label>
+                                    <div class="input-group form-group-sm">
+                                        <select class="selectpicker form-control"  data-style="btn-default"  class="input-sm">
+                                            <option>Libre</option>
+                                            <option>Occup�(e)</option>                                            
+                                        </select>   
+                                        <span class="input-group-btn">
+                                           <button disabled type="button" class="btn btn-default my-group-button btn-sm" data-toggle="modal" data-target="#myModal">
+                                             <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:blue"></span>
+                                           </button>
+                                       </span>
+                                    </div>                             
+                              </div>
+                           </span>
+                      </div>
+                    </div>
+                </div>                
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" >Save</button>
+                <!--<button class="btn btn-danger" type="button" ng-show="NewEvent.EventID > 0" ng-click="delete()">Delete</button>-->
+                <button class="btn btn-default" type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuler</button>
+
+            </div>
+            <!--Angular modal dialog code ends here-->
+       </div>
+   <div>
+</div>

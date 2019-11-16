@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="keren" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:/KEREN</jta-data-source>
+    <class>com.core.menus.MenuAction</class>
+    <class>com.core.menus.MenuGroupActions</class>
+    <class>com.core.menus.MenuModule</class>
+    <class>com.core.referentiels.Devise</class>
+    <class>com.core.referentiels.Pays</class>
+    <class>com.core.securites.Utilisateur</class>
+    <class>com.core.referentiels.Region</class>
+    <class>com.core.referentiels.Societe</class>
+    <class>com.core.langues.Langue</class>
+    <class>com.core.securites.GroupeDetail</class>
+    <class>com.core.calendar.Event</class>
+    <class>com.core.securites.Groupe</class>
+    <class>com.core.calendar.Rappel</class>
+    <class>com.core.views.FormRecord</class>
+    <class>com.core.views.Record</class>
+    <class>com.core.views.TreeRecord</class>
+    <class>com.core.menus.ActionItem</class>
+    <class>com.core.views.ReportRecord</class>
+    <class>com.core.referentiels.PieceJointe</class>
+    <class>com.core.views.DashboardRecord</class>
+    <class>com.core.discussions.Canal</class>
+    <class>com.core.discussions.KMessage</class>
+    <class>com.core.discussions.RMessage</class>
+    <class>com.core.discussions.SMessage</class>
+    <class>com.core.discussions.Follower</class>
+    <class>com.core.views.CalendarRecord</class>
+    <class>com.core.email.Email</class>
+    <class>com.core.langues.Terme</class>
+    <class>com.core.importexport.Export</class>
+    <class>com.core.securites.AnneGlobal</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

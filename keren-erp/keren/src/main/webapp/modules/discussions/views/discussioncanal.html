@@ -1,0 +1,38 @@
+<div style="height: 45px;display: inline-block;padding-left: 0px;border: solid 5px blue;" class="col-sm-12  col-md-12">
+     <div class="form-group  col-sm-11  col-md-11" style="padding-left: 0px; padding-right: 0px;">
+       <input type="text" class="form-control"  id="name" placeholder="Votre Nom" ng-required="true" ng-minlength="2" style="width: 100%;">
+    </div>
+    <div class="col-sm-1  col-md-1" style="padding:0px;height: 100%;">
+       <span style="display: inline-block;width: 45%;height: 100%;">
+            <div class="btn-group  dropdown"    role="group"  aria-label="group 2" style="width: 100%;height: 100%;">                     
+                <button type="button"  class="btn btn-default dropdown dropdown-toggle btn-sm" data-toggle="dropdown"
+                                      aria-haspopup="false"  aria-expanded="true" id="pjidbtn" style="width: 100%;height: 100%;">
+                    <span style="display: inline-block">
+                        <span class="glyphicon glyphicon-paperclip"  aria-hidden="true" style="color:blue;"></span>
+                        <span class="caret"></span>
+                     </span>
+                </button>
+                <ul class="dropdown-menu"  role="menu"  aria-labelledby="imprimerbtn">  
+                   <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#" ng-click="addpiecesjointe()">
+                         Ajouter
+                      </a>                            
+                   </li>                         
+                </ul>                        
+           </div>
+        </span>
+        <span style="display: inline-block;width: 50%;height: 100%;">
+        <button type="button"  class="btn btn-default btn-sm" ng-click ="messagesAction()" style="width: 100%;height: 100%;">
+          <span class="glyphicon glyphicon-send" aria-hidden="true" style="color:blue"></span>
+        </button> 
+       </span>               
+    </div>
+</div>
+<div style="height: 87%;overflow: auto;">             
+   <table class="table table-inbox table-hover"  id = "t_messages_id">    
+   
+   </table>
+ </div>
+ 
+
+

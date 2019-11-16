@@ -1,0 +1,28 @@
+<!-- <div class="col-sm-3 col-md-2 sidebar">      
+  <ul class="nav nav-sidebar" ng-repeat="action in currentModule.actions">
+    <li><a href=""  ng-click="getSelectAction(action)">{{action.name}}</a></li>            
+  </ul>         
+</div> -->
+ 
+
+<script src="js\requestAppsSerge.js"></script>
+<script src="js\design_principalFragmentSerge.js"></script>
+
+<div id="menuGauche">
+    <div id="logoSocieteContent"><img id="appli_icon_id" src="images/bunec.png"></div> 
+    <div id="menusContentSpecial" class="menusContentSpecialStyle" ng-class="ddd" data-simplebar="init" data-simplebar-force-enabled="true" data-simplebar-autohide="false">
+        <div id="{{menu.id}}_elementModuleMenus" class="elementModuleMenus" ng-repeat="menu in currentModule.groups" ng-hide="menu.showmenu==false">
+            <div id="{{menu.id}}_elementModuleMenusEntete" class="elementModuleMenusEntete" rel="tooltip" data-original-title="{{menu.label | translate}}">
+                <span id="{{menu.id}}_elementModuleMenusLogo" class="elementModuleMenusLogo"><i class="{{menu.icon}}"></i></span>
+                <span id="{{menu.id}}_elementModuleMenusDescription" class="elementModuleMenusDescription" >{{menu.label | translate}}</span>
+            </div>
+            <div id="{{menu.id}}_elementModuleMenusCorps" class="elementModuleMenusCorps">
+                <div id="{{menuitem.id}}_elementModuleMenusPetit" class="elementModuleMenusPetit" ng-repeat=" menuitem in menu.actions" ng-hide="menuitem.securitylevel==3" ng-click="getSelectAction(menuitem)" ng-if="menuitem.hide==false" ng-class="getMenuClass(menuitem)" rel="tooltip" data-original-title="{{menuitem.label | translate}}">
+                    <span id="{{menuitem.id}}_elementModuleMenusPetitLogo" class="elementModuleMenusPetitLogo"><i class="fa fa-circle"></i></span>
+                    <span id="{{menuitem.id}}_elementModuleMenusPetitDescription" class="elementModuleMenusPetitDescription">{{menuitem.label | translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ligneContent"></div>
+</div>
