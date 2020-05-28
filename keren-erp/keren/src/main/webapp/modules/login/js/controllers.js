@@ -84,7 +84,8 @@ angular.module('keren.core.login')
           
           $scope.anneescolaires = [
                                    { 'id': 2018, 'code' : '2018','designation' : '2018 / 2019' },
-                                   { 'id': 2019, 'code' : '2019','designation' : '2019 / 2020' }
+                                   { 'id': 2019, 'code' : '2019','designation' : '2019 / 2020' },
+                                   { 'id': 2020, 'code' : '2020','designation' : '2020 / 2021' }
                                    ];
         $scope.anneescilaire = $scope.anneescolaires[1].code;
         
