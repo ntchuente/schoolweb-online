@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.momerata.ejbtimer;
+
+/**
+ * @author PSE-Computer
+ *
+ */
+@Singleton
+public class TimerService {
+	
+	 @Schedule(second = "*/1", minute = "*", hour = "*", persistent = false)
+	    public void periodic() {
+	        System.out.println("period");
+	    }
+
+	    @Schedule(dayOfMonth = "25", hour = "16", minute = "10", persistent = false)
+	    public void schedule() {
+	        System.out.println("schedule");
+	    }
+
+}

@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.momerata.ejbtimer;
+
+/**
+ * @author PSE-Computer
+ *
+ */
+@Singleton
+public class TimerService {
+
+}

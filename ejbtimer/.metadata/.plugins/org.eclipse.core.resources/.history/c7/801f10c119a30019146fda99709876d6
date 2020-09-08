@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.momerata.ejbtimer;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.ScheduleExpression;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.ejb.Timeout;
+import javax.ejb.Timer;
+import javax.ejb.TimerConfig;
+import javax.ejb.TimerService;
+
+/**
+ * @author PSE-Computer
+ *
+ */
+@Singleton
+@Startup
+public class SmsServiceTest3 {
+	@Resource
+	TimerService timerService;
+	@PostConstruct
+	public void createTimer() {
+	  ScheduleExpression schedule = new
+	 
+	 
+	 
+	  ScheduleExpression().minute("30").hour("5");
+		TimerConfig config = new TimerConfig();
+		config.setPersistent(false);
+		timerService.createCalendarTimer(schedule, config);
+	  }
+	  @Timeout
+	  public void monTraitement(Timer timer) {
+	 	// traitement à coder
+	  }
+}

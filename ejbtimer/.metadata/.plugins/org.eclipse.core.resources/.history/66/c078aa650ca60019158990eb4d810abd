@@ -1,0 +1,5 @@
+package com.momerata.ejbtimer;
+
+public interface EmployeeLocal {
+
+}

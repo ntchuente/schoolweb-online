@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.momerata.ejbtimer;
+
+import javax.ejb.Stateless;
+
+/**
+ * @author PSE-Computer
+ *
+ */
+@Stateless
+public class EmployeeBean implements EmployeeLocal,EmployeeRemote{
+
+	public Long addBid(String userId, Long itemId, Double bidPrice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

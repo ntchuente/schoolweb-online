@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.momerata.ejbtimer;
+
+import javax.annotation.Resource;
+import javax.ejb.Singleton;
+import javax.ejb.TimerService;
+
+/**
+ * @author PSE-Computer
+ *
+ */
+@Singleton
+public class SmsServiceTest2 {
+	
+	@Resource
+	TimerService timerservice;
+
+}

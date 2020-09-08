@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.ejb.Schedule"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="javax.ejb.TimerService"/>
+<fullyQualifiedTypeName name="javax.ejb.Singleton"/>
+<fullyQualifiedTypeName name="javax.ejb.Startup"/>
+<fullyQualifiedTypeName name="javax.ejb.Local"/>
+<fullyQualifiedTypeName name="javax.ejb.Remote"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="com.momerata.ejbtimer.EmployeeLocal"/>
+<fullyQualifiedTypeName name="javax.ejb.Timer"/>
+<fullyQualifiedTypeName name="com.momerata.ejbtimer.EmployeeRemote"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+</qualifiedTypeNameHistroy>
