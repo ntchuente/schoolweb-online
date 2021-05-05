@@ -12,8 +12,8 @@
   <properties>
        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serveur.jboss.repertoire.deploiement.war>D:\ntw\sources\serveurs\education\jboss\standalone\deployments\kerencore.war</serveur.jboss.repertoire.deploiement.war>
-        <repertoire.target.generation.war>D:\ntw\sources\school-web\keren-erp\core-components\service-components\service-impl\target\kerencore.war</repertoire.target.generation.war>
+        <serveur.jboss.repertoire.deploiement.war>D:\PERSO\usine\jboss\standalone\deployments\kerencore.war</serveur.jboss.repertoire.deploiement.war>
+        <repertoire.target.generation.war>D:\PERSO\projet\schoolweb\schoolweb-online\keren-erp\core-components\service-components\service-impl\target\kerencore.war</repertoire.target.generation.war>
     </properties>
 
     <dependencies>
