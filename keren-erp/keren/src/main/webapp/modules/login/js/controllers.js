@@ -85,14 +85,15 @@ angular.module('keren.core.login')
           $scope.anneescolaires = [
                                    { 'id': 2018, 'code' : '2018','designation' : '2018 / 2019' },
                                    { 'id': 2019, 'code' : '2019','designation' : '2019 / 2020' },
-                                   { 'id': 2021, 'code' : '2020','designation' : '2020 / 2021' },
-                                   { 'id': 2022, 'code' : '2020','designation' : '2021 / 2022' },
-                                   { 'id': 2023, 'code' : '2020','designation' : '2022 / 2023' },
-                                   { 'id': 2024, 'code' : '2020','designation' : '2023 / 2024' },
-                                   { 'id': 2025, 'code' : '2020','designation' : '2024 / 2025' },
-                                   { 'id': 2026, 'code' : '2020','designation' : '2026 / 2027' },
-                                   { 'id': 2027, 'code' : '2020','designation' : '2027 / 2028' },
-                                   { 'id': 2028, 'code' : '2020','designation' : '2028 / 2029' }
+                                   { 'id': 2020, 'code' : '2020','designation' : '2020 / 2021' },
+                                   { 'id': 2021, 'code' : '2021','designation' : '2021 / 2022' },
+                                   { 'id': 2022, 'code' : '2022','designation' : '2022 / 2023' },
+                                   { 'id': 2023, 'code' : '2023','designation' : '2023 / 2024' },
+                                   { 'id': 2024, 'code' : '2024','designation' : '2024 / 2025' },
+                                   { 'id': 2025, 'code' : '2025','designation' : '2025 / 2026' },
+                                   { 'id': 2026, 'code' : '2026','designation' : '2026 / 2027' },
+                                   { 'id': 2027, 'code' : '2027','designation' : '2027 / 2028' },
+                                   { 'id': 2028, 'code' : '2028','designation' : '2028 / 2029' }
                                    ];
         $scope.anneescilaire = $scope.anneescolaires[1].code;
         
