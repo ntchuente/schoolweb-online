@@ -7,14 +7,14 @@ and open the template in the editor.
 
 <script src="js\requestAppsSerge.js"></script>
 <script src="js\design_principalFragmentSerge.js"></script>
-
+<title>ISI SCHOOL| PORTAIL</title>
 <div id="entetePrincipalPanel">
     <span id="entetePrincipalPanelPart01">
         <span id="entetePrincipalPanelPart01LogoAndDescription">
             <span id="entetePrincipalPanelPart01Logo"></span>
             <span id="entetePrincipalPanelPart01Description">
-                <span id="footerPrincipalPanelTitre01">Cauris </span>
-                <span id="footerPrincipalPanelTitre02">School</span>
+                <span id="footerPrincipalPanelTitre01">PORTAIL ISI  </span>
+                <span id="footerPrincipalPanelTitre02">SCHOOL</span>
             </span>
         </span>
         
@@ -100,46 +100,90 @@ and open the template in the editor.
                 
                 
                 
-                <div id="{{module.id}}_moduleItem" ng-click="getModule(module)"  class="moduleItem" ng-repeat="module in modules" rel="tooltip" data-original-title="{{module.shortDescription | translate}}">
-                    <div id="{{module.id}}_moduleItemLogo" class="moduleItemLogo"><i class="{{module.icon}}"></i></div>
-                    <div id="{{module.id}}_moduleItemDescription" class="moduleItemDescription">{{module.label}}</div>
-                    
-                    <script>
+               <div id="{{module.id}}_moduleItem" class="col-md-3" ng-repeat="module in modules" rel="tooltip" data-original-title="{{module.shortDescription | translate}}"> 
+               <div  class="item-app-help first-item">
+                 <div  class="moduleItemLogo text-left">
+                                <i class="{{module.icon}}"></i>
+                            </div>
+                            <div class="help-title">
+                               {{module.label}}
+                            </div>
+                            <div class="help-content">
+                               {{module.longDescription}}
+                            </div>
+                            <div class="text-center mg-t-5">
+                                <a  href="#" class="lg-btn-primary" ng-click="getModule(module)" >Acceder</a>
+                            </div>
+              </div> 
+               <script>
                         
                         //On applique les styles et les evenemeents
                         chargerLesModules();
                     </script>
-                </div>
+              </div> 
                 
                 <!-- MODULE  APPLICATIONS-->
-                <div id="applicationModule_moduleItem" ng-hide="hideApplicationModule()" ng-click="applicationModule()"  class="moduleItem" rel="tooltip" data-original-title="{{'APPLI_DESC' | translate}}">
-                    <div id="applicationModule_moduleItemLogo" class="moduleItemLogo"><i class="fa fa-list"></i></div>
-                    <div id="applicationModule_moduleItemDescription" class="moduleItemDescription">Applications</div>
-                    
-                    <script>
+            <div id="applicationModule_moduleItem" ng-hide="hideApplicationModule()" class="col-md-3" rel="tooltip" data-original-title="{{APPLI_DESC | translate}}"> 
+               <div _ngcontent-jri-c144="" class="item-app-help first-item">
+                 <div _ngcontent-jri-c144="" class="moduleItemLogo text-left">
+                                <i class="fa fa-list"></i>
+                            </div>
+                            <div class="help-title">
+                               Applications
+                            </div>
+                            <div class="help-content">
+                               module de description des applications 
+                            </div>
+                            <div class="text-center mg-t-5">
+                                <a  href="#" class="lg-btn-primary" ng-click="applicationModule()" >Acceder</a>
+                            </div>
+              </div> 
+               <script>
                         
                         //On applique les styles et les evenemeents
                         chargerApplicationModule();
                     </script>
-                </div>
-                
+              </div>  
+                             
                 <!-- MODULE  CONFIGURATION-->
-                <div id="configurationModule_moduleItem" ng-hide="hideConfiguration()" ng-click="configurationModuleAction()"  class="moduleItem" rel="tooltip" data-original-title="{{'CONFIG_DESC' | translate}}">
-                    <div id="configurationModule_moduleItemLogo" class="moduleItemLogo"><i class="fa fa-cog"></i></div>
-                    <div id="configurationModule_moduleItemDescription" class="moduleItemDescription">Configurations</div>
-                    
-                    <script>
+                
+                 <div id="configurationModule_moduleItem" ng-hide="hideConfiguration()" class="col-md-3" rel="tooltip" data-original-title="{{CONFIG_DESC | translate}}"> 
+               <div _ngcontent-jri-c144="" class="item-app-help first-item">
+                 <div _ngcontent-jri-c144="" class="moduleItemLogo text-left">
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div class="help-title">
+                               Configuration
+                            </div>
+                            <div class="help-content">
+                               module de configuration 
+                            </div>
+                            <div class="text-center mg-t-5">
+                                <a  href="#" class="lg-btn-primary" ng-click="configurationModuleAction()" >Acceder</a>
+                            </div>
+              </div> 
+               <script>
                         
                         //On applique les styles et les evenemeents
                         chargerConfigurationModule();
                     </script>
-                </div>
-                
-               
+              </div>  
+                             
             </div>
         </div>
     </div>
-    <div id='footerPrincipalPanel'></div> 
+    
+     <!-- FOOTER-->
+      <div  class="text-center" style="border-top: 1px solid #ddd; padding: 15px 50px;">
+      <div  class="footer-copyright text-left">
+    <span  class="copy-autor2">Copyright 2018 GSBS SCHOOL | MENEDUB </span>
+    <span class="float-right" style="font-family: Quicksand-Regular;">Powered by <span style="color: #4FCE5D;">ISI CONSULTING</span> </span>
+    </div> 
+      </div>
+    
+    
+    
+    
 </div>
 
 <!--<nav id="barMenuHorizontal" class="navbar navbar-inverse navbar-fixed-top navbar-sm" style="display: none">

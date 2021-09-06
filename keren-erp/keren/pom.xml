@@ -10,8 +10,8 @@
     <properties>
        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serveur.jboss.repertoire.deploiement.war>D:\PERSO\usine\jboss\standalone\deployments\kerenerp.war</serveur.jboss.repertoire.deploiement.war>
-        <repertoire.target.generation.war>D:\PERSO\projet\schoolweb\schoolweb-online\keren-erp\keren\target\kerenerp.war</repertoire.target.generation.war>
+        <serveur.jboss.repertoire.deploiement.war>D:\PERSO\perso\usine\jboss\standalone\deployments\kerenerp.war</serveur.jboss.repertoire.deploiement.war>
+        <repertoire.target.generation.war>D:\PERSO\tools\schoolweb-online\keren-erp\keren\target\kerenerp.war</repertoire.target.generation.war>
     </properties>
     <name>Keren-ERP</name>
     <url>http://maven.apache.org</url>

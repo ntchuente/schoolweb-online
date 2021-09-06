@@ -115,8 +115,8 @@ function afficherPanelHide(){
     $("#entetePrincipalPanelPart01Description").html("");
     
     //On remet les textes d'origines
-    $('#entetePrincipalPanelPart01Description').append("<span id='footerPrincipalPanelTitre01'>Cauris </span>");
-    $('#entetePrincipalPanelPart01Description').append("<span id='footerPrincipalPanelTitre02'>ERP</span>");
+    $('#entetePrincipalPanelPart01Description').append("<span id='footerPrincipalPanelTitre01'>PORTAIL ISI </span>");
+    $('#entetePrincipalPanelPart01Description').append("<span id='footerPrincipalPanelTitre02'>SCHOOL</span>");
 
     //On cache la page module courantea afficher
     $('#principalePanel').fadeIn(200);

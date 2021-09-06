@@ -288,7 +288,8 @@ body{
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #aa8d2b;
+    color: black;
+    margin-left: 20px;
 }
 .logo-name {
     color: #e6e6e6;
